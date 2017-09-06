@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+	<script src="../js/material/material-components-web.css.js"></script>
+    <script src="../js/material/style.css.js"></script>
+    <link href="../css/goOrder.css" rel="stylesheet" />
+    <link href="../css/order.css" rel="stylesheet" />
+    
+    <style type="text/css">
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css);
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link href="../js/material/material.indigo-pink.min.css" rel="stylesheet" />
+    <style>
+        *{
+            font-family: Roboto, sans-serif;
+        }
+        .demo-body {
+            padding: 24px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .demo-content > button {
+            margin-bottom: 6px;
+        }
+
+        .mdc-theme--dark {
+            background-color: #303030;
+        }
+
+        section.demo-content {
+            padding: 24px;
+        }
+
+        .catalog-dialog-demo {
+            position: relative;
+            width: 320px;
+        }
+
+        .dialog-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mdc-theme--dark, .section-dark-theme {
+            background: #262626;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="min-height:100%;">
+        
+        <div class="leftPart">
+            <div class="resetGroup">
+                <div class="a" style="text-align: left;">
+                    <button class="NextBtn mdc-button mdc-ripple-upgraded" style="padding:0;text-align:left;font-size:0;margin:0;">
+                        <img style="display:inline-block;vertical-align:middle;width:36px;margin-right:10px;" src="https://mall-res.momentcam.net/Images/mo/Order/ic_arrow_back_black.png" />
+                        <span style="font-size:20px;font-weight:bold;display:inline-block;vertical-align:middle;">Vissza</span>
+                    </button>
+                </div>
+                <div class="b" style="text-align: left;">
+                    <button class="NextBtn mdc-button mdc-ripple-upgraded" style="padding:0;text-align:left;font-size:0;margin:0;">
+                        <img style="display:inline-block;vertical-align:middle;width:36px;margin-right:10px;" src="https://mall-res.momentcam.net/Images/mo/Order/ic_arrow_back_black.png" />
+                        <span style="font-size:20px;font-weight:bold;display:inline-block;vertical-align:middle;">Vissza</span>
+                    </button>
+                </div>
+            </div>
+            <img id="showGoodPic" src="" alt="" />
+        </div>
+        <div class="rightPartHalf">
+            <h3 class="GoodNames"></h3>
+            <!--<p class="FromWho">
+                This is a test from <span></span>
+            </p>-->
+            <div class="line"></div>
+            <div class="specList">
+
+            </div>
+            <div class="NumBox">
+                <label>Mennyiség：</label>
+                <div class="ChooseNum">
+                    <a href="javascript:void(0);" class="add">-</a>
+                    <input type="text" class="CountNums" value="1" style="font-size: 14px;" />
+                    <a href="javascript:void(0);" class="reduce">+</a>
+                    <!--<!--<div class="ControlNum">
+                        <a href="javascript:void(0);" class="reduce"></a>
+                        <a href="javascript:void(0);" class="add"></a>
+                    </div>-->-->
+                </div>
+            </div>
+            <div class="line" style="margin:20px 0;"></div>
+            <div class="UnitPrices">
+                <span>Összesen:</span>
+                <span></span>
+            </div>
+            <div class="Amount">
+                <span>Mennyiség:</span>
+                <span>x1</span>
+            </div>
+            <div class="line" style="margin:20px 0;"></div>
+            <div class="TotlePrices">
+                <span>Összesen:</span>
+                <span></span>
+            </div>
+            <div class="GoPayBox">
+                <button class="GoPay mdc-button mdc-button--raised mdc-ripple-upgraded" style="width:auto;">
+                    <img style="display:inline-block;vertical-align:middle;margin-right:10px;width:30px;" src="https://mall-res.momentcam.net/Images/mo/Order/ic_payment.png" />
+                    <span style="display:inline-block;vertical-align:middle;">Tovább a fizetéshez</span>
+                </button>
+            </div>
+        </div>
+        <div class="middlePart nextPart">
+            <div class="DiscountCode">
+                <h3>Promóciós kód használata</h3>
+                <div class="CodeBox">
+                    <div id="tf-box-example" class="mdc-textfield mdc-textfield--box mdc-textfield--upgraded mdc-ripple-upgraded mdc-textfield--invalid">
+                        <input type="text" id="tf-box" class="mdc-textfield__input" required="" aria-controls="name-validation-message">
+                        <label for="tf-box" class="mdc-textfield__label">Ide tudod beírni a promóciós kódodat!</label>
+                        <div class="mdc-textfield__bottom-line"></div>
+                    </div>
+                    <!--<input type="text" placeholder="Enter your promo code here" />-->
+                    <div class="CodeSubmit mdc-button mdc-button--raised mdc-ripple-upgraded">Felhasználom</div>
+                </div>
+            </div>
+            <div class="addressBox">
+                <div class="addressTitle Editing">
+                    <div class="TipPic"></div>
+                    <div class="Num">1</div>
+                    <div class="Words">Szállítási adatok megadása</div>
+                    <div class="AddressEditBox">
+                        <img src="https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_edit.png" />
+                        <span>Módosít</span>
+                    </div>
+                </div>
+                <div class="DetailList">
+
+                    <div class="CreatAdressBtn">
+                        <img src="https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_address_add.png" />
+                        <span>Új cím</span>
+                    </div>
+                    <div class="line"></div>
+                    <button class="SaveBtn mdc-button mdc-button--raised mdc-ripple-upgraded">
+                        Mentés és folytatás
+                    </button>
+                </div>
+            </div>
+            <div class="PayBox NoUsed">
+
+                <div class="PayTitle Editing">
+                    <div class="TipPic"></div>
+                    <div class="Num">2</div>
+                    <div class="Words">Fizetési mód</div>
+                    <div class="PayEditBox">
+                        <img src="https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_edit.png" />
+                        <span>Módosít</span>
+                    </div>
+                </div>
+                <div class="ChooseType">
+                    <div class="PayPal Clicked">
+                        Paypal-lel
+                        <div class="oLoading" style="background:#fff;display: none;width: 160px;height: 30px;line-height:30px;position: absolute;top: 0px;right: 0;z-index: 99999;font-size:0;text-align:right;">
+                            <div style="width: 20px;height: 20px;display:inline-block;vertical-align:middle;margin-right:7px;" class="mdl-spinner mdl-js-spinner is-active"></div>
+                            <span style="display:inline-block;vertical-align:middle;font-size:14px;color:#b52b3c;margin-right:7px;">Betöltés…</span>
+                        </div>
+                    </div>
+                    <div class="CreaditCardBox Clicked choosed">
+                        <div class="oLoading" style="background:#fff;display: none;width: 160px;height: 30px;line-height:30px;position: absolute;top: 0px;right: 0;z-index: 99999;font-size:0;text-align:right;">
+                            <!--<img style="display:inline-block;vertical-align:middle;margin-right:7px;" src="https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_loading.gif" />-->
+                            <div style="width: 20px;height: 20px;display:inline-block;vertical-align:middle;margin-right:7px;" class="mdl-spinner mdl-js-spinner is-active"></div>
+                            <span style="display:inline-block;vertical-align:middle;font-size:14px;color:#b52b3c;margin-right:7px;">Betöltés…</span>
+                        </div>
+                        <div class="CreaditCardTitle">
+                            <span>Bankkártya</span>
+                            <span>Fizetési adatok megadása</span>
+                        </div>
+                        <div class="Banks"></div>
+                        <div class="InsertText">
+                            <input class="Cardholder" type="text" placeholder="Name" />
+                            <div id="card-number" class="CardNumber hosted-field"></div>
+                            <div class="CardTime">
+                                <div id="expiration-date" class="CardMY hosted-field"></div>
+                                <div id="cvv" class="CardCvv hosted-field"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="Nofee">Ezen felül nincs egyéb költséged.</p>
+                    <div class="line"></div>
+                    <button class="PayNow mdc-button mdc-button--raised mdc-ripple-upgraded" id="PayCard">
+                        <img src="https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_pay.png" />
+                        <span>Fizetés most</span>
+                    </button>
+                    <button class="PayNow mdc-button mdc-button--raised mdc-ripple-upgraded" id="PayPal" style="font-size:14px;color:#fff;display:none;">
+                        Fizetés Paypal-lel
+                    </button>
+                    <button class="PayNow mdc-button mdc-button--raised mdc-ripple-upgraded" id="zero" style="display:none;">
+                        <img src="https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_pay.png"><span>Folytatás</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="rightPart nextPart">
+            <div class="PriceDetail">
+                <h3>Rendelési összesítő</h3>
+                <div class="DetailBox">
+                    <div class="title">
+                        <span>Leírás</span>
+                        <span>Összeg</span>
+                    </div>
+                    <div class="GoodName"></div>
+                    <div class="ItemPrice">
+                        <span>Ár：</span>
+                        <span class="UnitPrice"></span>
+                    </div>
+                    <div class="Quantitys">
+                        <span>Mennyiség：</span>
+                        <span class="Quantity"></span>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="ItemTotalBox">
+                    <span>Termékek összesen:</span>
+                    <span class="ItemTotal"></span>
+                </div>
+            </div>
+            <div class="SubtotalBox BoxOutside">
+                <span>Összesen:</span>
+                <span class="Subtotal"></span>
+            </div>
+            <div class="ShipingFeeBox BoxOutside">
+                <span>Szállítási költség:</span>
+                <span class="ShipingFee"></span>
+            </div>
+            <div class="DiscountBox BoxOutside">
+                <span>Kedvezmények:</span>
+                <span class="Discount"></span>
+            </div>
+            <div class="line"></div>
+            <div class="TotalBox">
+                <span>Összesen:</span>
+                <span class="Total"></span>
+            </div>
+        </div>
+    </div>
+
+    <aside id="mdc-dialog-default" class="mdc-dialog" role="alertdialog" aria-hidden="true" aria-labelledby="mdc-dialog-default-label" aria-describedby="mdc-dialog-default-description">
+        <div class="mdc-dialog__surface" style="min-width: 380px;max-width: 565px;">
+            <header class="mdc-dialog__header">
+                <h2 id="mdc-dialog-default-label" class="mdc-dialog__header__title" style="text-align:left;">
+                    Figyelem!
+                </h2>
+            </header>
+            <section id="mdc-dialog-default-description" class="mdc-dialog__body" style="text-align:left;"></section>
+            <footer class="mdc-dialog__footer">
+                <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel mdc-ripple-upgraded">OK</button>
+            </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+    </aside>
+    <button id="default-dialog-activation" class="mdc-button mdc-button--primary mdc-button--raised mdc-ripple-upgraded" style="display:none;"></button>
+
+    <script src="https://mall-res.momentcam.net/lib/jquery.min.js"></script>
+    <script src="https://mall-res.momentcam.net/lib/loading.js"></script>
+    <script src="../js/config.js?v=a12"></script>
+    <script src="https://mall-res.momentcam.net/lib/Cookie.js"></script>
+    <script src="../js/Pay/app.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.11.0/js/client.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.11.0/js/hosted-fields.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.11.0/js/paypal.min.js"></script>
+    <script src="../js/Pay/braintreeOnePage.js"></script>
+    <script src="../js/v2/Order.js"></script>
+    <script src="../js/v2/goOrder.js"></script>
+    <script src="../js/v2/Pub.js"></script>
+    <script src="../js/material/material-components-web.js"></script>
+    
+    <script src="../js/material/material.min.js"></script>
+    <script>
+        $(function () {
+            window.parent.history.pushState(null, null, "Index.html?name=order");
+            goOrder.init();
+            $("body").unbind("click").on("click", function () {
+                window.parent.hiding($(this));
+            });
+
+            var dialog = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-default'));
+
+            dialog.listen('MDCDialog:accept', function () {
+                console.log('accepted');
+            });
+
+            dialog.listen('MDCDialog:cancel', function () {
+                console.log('canceled');
+            });
+
+            document.querySelector('#default-dialog-activation').addEventListener('click', function (evt) {
+                dialog.lastFocusedTarget = evt.target;
+                dialog.show();
+            });
+
+          setTimeout(function() {
+            var tfEl = document.getElementById('tf-box-example');
+            var tf = new mdc.textfield.MDCTextfield(tfEl);
+            var wrapper = document.getElementById('demo-tf-box-wrapper');
+            document.getElementById('tf-box').addEventListener('change', function (evt) {
+              if (evt.target.checked) {
+                wrapper.setAttribute('dir', 'rtl');
+              } else {
+                wrapper.removeAttribute('dir');
+              }
+              tf.ripple.layout();
+            });
+          }, 0);
+
+        });
+        
+    </script>
+</body>
+</html>  

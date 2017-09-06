@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MomentCam</title>
+    <link rel="stylesheet" type="text/css" href="../css/Upload.css?v=d332" />
+    <link href="../css/orderPart.css?v=2122" rel="stylesheet" />
+    <!--<link href="https://mall-res.momentcam.net/lib/swiper.min.css" rel="stylesheet" />-->
+    <link href="../css/beauty.css" rel="stylesheet" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" async rel="stylesheet">
+    
+    <style type="text/css">
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css);
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <style>
+        * {
+            font-family: Roboto, sans-serif;
+        }
+
+        .demo-body {
+            padding: 24px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .demo-content > button {
+            margin-bottom: 6px;
+        }
+
+        .mdc-theme--dark {
+            background-color: #303030;
+        }
+
+        section.demo-content {
+            padding: 24px;
+        }
+
+        .catalog-dialog-demo {
+            position: relative;
+            width: 320px;
+        }
+
+        .dialog-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mdc-theme--dark, .section-dark-theme {
+            background: #262626;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainBox">
+        <div class="mainCover">
+            <div class="mainCoverContent">
+                <div class="tips">
+                    <div class="Arrow"></div>
+                    <fieldset>
+                        <legend>Tips</legend>
+                        <p class="TipText">Change the photo here.</p>
+                        <div class="nextCheck">
+                            <input id="checkBox" type="checkbox" />
+                            <label for="checkBox">Don't show up next time</label>
+                        </div>
+                        <div class="SkipBox">
+                            <span class="Skip">Skip the torial</span>
+                            <span class="nextTip">Következő</span>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div class="SpecCover">
+            <div class="SpecContain">
+                <div class="SpecBox">
+                    <div class="SpecBoxLeft">
+                        <img src="https://mall-res.momentcam.net/Images/mo/Spec/format_eg1.jpg" />
+                        <p style="margin-top:10px;">1.Full image of high definition</p>
+                        <p>2.without watermark</p>
+                        <div class="SaveBtn">Save for $9.99</div>
+                    </div>
+                    <div class="SpecBoxRight">
+                        <img src="https://mall-res.momentcam.net/Images/mo/Spec/format_eg2.jpg" />
+                        <p style="margin-top:10px;">1.Only 1/6 of Full image</p>
+                        <p>2.with watermark</p>
+                        <div class="SaveBtn">Save for free</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chooseSpecCover">
+            <div class="chooseSpec">
+                <div class="specList">
+                </div>
+                <div class="BuyCount">
+                    Mennyiség
+                    <div class="CountSure">
+                        <span class="reduce">-</span>
+                        <span class="CountNum">1</span>
+                        <span class="add">+</span>
+                    </div>
+                </div>
+                <div class="UnitPrice">
+                    <span>Ár:</span>
+                    <span></span>
+                </div>
+                <div class="TotlePrice">
+                    <span>Összesen:</span>
+                    <span></span>
+                </div>
+                <div class="Confirm active">Elfogadom</div>
+            </div>
+            <div class="order_Main" style="display:block;">
+                <div class="EmailBox">
+                    <h3>E-mail</h3>
+                    <input type="email" required placeholder="e-mail címet" id="emailImg" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address" />
+                    <p style="color:red;margin-top:4px" id="emailErr"></p>
+                </div>
+                <div class="addressesBox">
+                    <h3>Szállítási cím</h3>
+                    <div class="addAddress">
+                        <p>Új cím</p>
+                        <div class="addAddress_form">
+                            <div class="address_options">
+                                <input type="text" id="receiver" placeholder="Név" />
+                                <select id="country"></select>
+                            </div>
+                            <div class="address_options">
+                                <input type="text" required id="address1" placeholder="Cím" />
+                                <input type="text" required id="address2" placeholder="Cím folytatása" />
+                            </div>
+                            <div class="address_options">
+                                <input type="text" required id="city" placeholder="Város" />
+                                <input type="text" required id="stateOrProvince" placeholder="Megye" />
+                                <input type="text" required id="zipCode" placeholder="Irányítószám" />
+                            </div>
+                            <div class="address_options">
+                                <select class="numCode">
+                                    <!--<option>+86</option>
+                                    <option>+1</option>-->
+                                </select>
+                                <input type="text" required placeholder="Mobiltelefon szám" id="mobile" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+                                <input type="email" required placeholder="E-mail" id="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address" />
+                            </div>
+                            <div class="addAddress_Buttons">
+                                <div class="addAddress_save">Megerősít</div>
+                                <div class="addAddress_cancel">Törlés</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="addressBox">
+                        <div class="box boxCreat">
+                            <img src="https://mall-res.momentcam.net/Images/mo/Order/order_address_add.png" />
+                            <p>Új cím</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="productInfo">
+                    <h3>Termékismertető</h3>
+                    <div class="productInfoWrapper">
+                        <img src="" class="productThumb">
+                        <div class="productName">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="rightPart">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <input type="text" maxlength="120" />
+                        <span>Megjegyzés</span>
+                    </div>
+                    <div class="Code" style="font-size:0;">
+                        <input type="text" />
+                        <div class="UseCodeBtn">Felhasználom</div>
+                        <span>Promócióskód</span>
+                    </div>
+                    <div class="pricePart">
+                        <div class="orderPrice"><span>Rendelés összege (szállítási költség nélkül):</span><span class="price"></span></div>
+                        <div class="shippingFee"><span>Szállítási költség:</span><span class="price"></span></div>
+                        <div class="totalPrice"><span>Végösszeg:</span><span class="price big"></span></div>
+                    </div>
+                </div>
+                <div class="submitButton">
+                    Elküldöm a megrendelésem
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="main">
+            <div id="part1" class="part Beauty">
+                <div class="BeautyRight">
+                    <div class="fairShow boxShadow">
+                        <!--<img src=""  />-->
+                        <div class="fairPicShow">
+                            <img src="https://mall-res.momentcam.net/Images/mo/loading_gif.gif" class="loading" />
+                            <img src="" name="renderResult" />
+                        </div>
+                    </div>
+                    <div class="resetGroup" style="width:194px;position:fixed;right:130px;bottom:200px!important;left:auto;top:auto!important;z-index:99;">
+                        <div class="b">
+                            <button class="NextBtn mdc-button mdc-button--raised" style="width:194px;border-radius:6px;padding:0;font-size:0;text-align:left;">
+                                <img style="width:36px;display:inline-block;vertical-align:middle;margin:0 10px;" src="https://mall-res.momentcam.net/Images/mo/Beauty/ic_arrow_back.png" />
+                                <span style="display:inline-block;vertical-align:middle;font-size:14px;">Új kép betöltése</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="buttonGroup" style="width:194px;position:fixed;top:auto;bottom:126px;right:130px;z-index:99;">
+                        <div class="a">
+                            <button class="NextBtn mdc-button mdc-button--raised" style="width:194px;border-radius:6px;padding:0;font-size:0;text-align:left;">
+                                <img style="width:36px;display:inline-block;vertical-align:middle;margin:0 10px;" src="https://mall-res.momentcam.net/Images/mo/Beauty/ic_arrow_forward.png" />
+                                <span style="display:inline-block;vertical-align:middle;font-size:14px;">Következő</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="BeautyLeft">
+                    <div class="topPart ">
+                        <div class="tab">
+                            <ul>
+                                <li class="active top" data-id="376" data-type="10" data-name="hair">Haj</li>
+                                <li class="top eyes" data-id="186" data-type="5" data-name="eyes">Szem</li>
+                                <li class="top beard" data-id="205" data-type="2" data-name="beard">Szakáll</li>
+                                <li class="top" data-id="206" data-type="8" data-name="glasses">Szemüvegek</li>
+                            </ul>
+                        </div>
+                        <div class="topContainer boxShadow">
+
+                            <div class="fairList" id="hairColor">
+                                <div class="fairColor" data-id="059">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_haircolor_3.png" />
+                                </div>
+                                <div class="fairColor" data-id="058">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_haircolor_4.png" />
+                                </div>
+                                <div class="fairColor" data-id="055">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_haircolor_1.png" />
+                                </div>
+                                <div class="fairColor" data-id="057">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_haircolor_5_click.png" />
+                                </div>
+                                <div class="fairColor" data-id="063">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_haircolor_6.png" />
+                                </div>
+                                <div class="fairColor" data-id="056">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_haircolor_2.png" />
+                                </div>
+                               
+                            </div>
+
+                            <div class="iconContainer swiper-container " id="topSwiperContainer">
+                                <div class="swiper-wrapper swiper-container-assets dragscroll" id="topAssetsContainer">
+
+                                </div>
+
+                            </div>
+                            <div class="swiper-button-prev">
+
+                            </div>
+                            <div class="swiper-button-next">
+
+                            </div>
+                            <!--<div class="blurEdge">
+
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="bottomPart ">
+                        <div class="tab">
+                            <ul>
+                                <li class="active bottom" data-id="375" data-type="7" data-name="face">Arcforma</li>
+                                <li class="bottom" data-id="187" data-type="1" data-name="accessories">Fejfedő</li>
+                                <li class="bottom" data-id="207" data-type="3" data-name="earring">Fülbevaló</li>
+                            </ul>
+                        </div>
+                        <div class="bottomContainer boxShadow">
+                            <div class="fairList" id="skinColor">
+                                <div class="fairColor active">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_skincolor_1_click.png?c1" />
+                                </div>
+                                <div class="fairColor">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_skincolor_2.png?c1" />
+                                </div>
+                                <div class="fairColor">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_skincolor_3.png?c1" />
+                                </div>
+                                <div class="fairColor">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_skincolor_4.png?c1" />
+                                </div>
+                                <div class="fairColor">
+                                    <img src="https://mall-res.momentcam.net/Images/mo/Beauty/makeup_skincolor_5.png?c1" />
+                                </div>
+                            </div>
+                            <div class="iconContainer swiper-container " id="bottomSwiperContainer">
+
+                                <div class="swiper-wrapper swiper-container-assets dragscroll" id="bottomAssetsContainer">
+
+                                </div>
+
+                            </div>
+                            <div class="swiper-button-prev">
+
+                            </div>
+                            <div class="swiper-button-next">
+
+                            </div>
+                            <!--<div class="blurEdge">
+
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+           
+
+                
+            </div>
+
+            <div class="CoverMask"></div>
+            <aside id="mdc-dialog-default" class="mdc-dialog" role="alertdialog" aria-hidden="true" aria-labelledby="mdc-dialog-default-label" aria-describedby="mdc-dialog-default-description" style="opacity:0;">
+                <div class="mdc-dialog__surface" style="min-width: 380px;max-width: 565px;">
+                    <header class="mdc-dialog__header">
+                        <h2 id="mdc-dialog-default-label" class="mdc-dialog__header__title" style="text-align:left;">
+                            Figyelem!
+                        </h2>
+                    </header>
+                    <section id="mdc-dialog-default-description" class="mdc-dialog__body" style="text-align:left;"></section>
+                    <footer class="mdc-dialog__footer">
+                        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel mdc-ripple-upgraded">OK</button>
+                    </footer>
+                </div>
+                <div class="mdc-dialog__backdrop"></div>
+            </aside>
+            <button id="default-dialog-activation" class="mdc-button mdc-button--primary mdc-button--raised mdc-ripple-upgraded" style="display:none;"></button>
+            <div class="confirm" style="display: none;">
+                <div class="ReleaseFaile">
+                    <p>
+
+                    </p>
+                    <div class="FaileSure">Kilépés</div>
+                    <div class="sSure">Törlés</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas" width=300 style="display:none;position:absolute;top:10px;left:10px;z-index:9999"></canvas>
+    <script src="https://mall-res.momentcam.net/lib/jquery.min.js"></script>
+    <script src="https://mall-res.momentcam.net/lib/Cookie.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="https://mall-res.momentcam.net/lib/loading.js"></script>
+    <script src="../js/v2/lib/overflow.js"></script>
+    <script src="../js/v2/lib/dragscroll.js"></script>
+    <script src="../js/v2/beauty.js"></script> 
+    <script src="../js/v2/p.js"></script>
+    <script src="../js/v2/Pub.js"></script>
+    <script src="../js/material/material-components-web.js"></script>
+    <script src="../js/material/material-components-web.css.js"></script>
+    <script src="../js/material/style.css.js"></script>
+    <script>
+        $(window).bind("pageshow", function (event) {
+            if (event.originalEvent.persisted) {
+                window.location.reload()
+            }
+        });
+    </script>
+    <script>
+        $(function () {
+            B.init();
+            window.parent.history.pushState(null, null, "Index.html?name=beauty");
+
+            //左右切换按钮
+            $(".pWrapper").parent().siblings(".swiper-button-prev").css("background-image", "url(https://mall-res.momentcam.net/Images/mo/v2/beauty/beauty_makeup_left_disabled.png)");
+            $(".pWrapper").parent().siblings(".swiper-button-next").css("background-image", "url(https://mall-res.momentcam.net/Images/mo/v2/beauty/beauty_makeup_right_normal.png)");
+            $(".pWrapper").scroll(function () {
+                var result = "";
+                $.each($(".pWrapper .swiper-slide"), function (i, e) {
+                    result += " " + checkInView($(e), false, $(".pWrapper"));
+                });
+                var firstWord = result.substr(0, 4), endWord = result.substr(result.length - 4);
+                console.log(result);
+                changeBtns(firstWord, endWord, $(".pWrapper"));
+            });
+            $("body").unbind("click").on("click", function () {
+                try {
+                    window.parent.hiding($(this));
+                } catch (e) {
+
+                }
+            });
+        });
+        var dialog = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-default'));
+        dialog.listen('MDCDialog:accept', function () {
+            console.log('accepted');
+        });
+        dialog.listen('MDCDialog:cancel', function () {
+            console.log('canceled');
+        });
+        document.querySelector('#default-dialog-activation').addEventListener('click', function (evt) {
+            dialog.lastFocusedTarget = evt.target;
+            dialog.show();
+        });
+        
+    </script>
+</body>
+
+</html>

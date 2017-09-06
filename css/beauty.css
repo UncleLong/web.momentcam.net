@@ -1,0 +1,606 @@
+.swiper-button-prev, .swiper-button-next {
+  width: 24px;
+  height: 29px;
+  top: 108px !important;
+  position: absolute;
+  background-size: cover;
+  z-index: 999; }
+.topContainer .swiper-button-prev, .topContainer .swiper-button-next {
+  top: 200px !important; }
+.BeautyLeft, .ProductLeft {
+  float: none;
+  position: relative;
+  overflow: hidden;
+  width: auto;}
+
+.buttonGroup .NextBtn, .resetGroup .NextBtn, .buttonGroup .Buy, .resetGroup .Buy, .buttonGroup .Share, .resetGroup .Share {
+  width: 130px;
+  height: 44px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  text-align: center;
+  line-height: 44px;
+  font-size: 16px;
+  color: white;
+  background: #b72a3d;
+  position: relative;
+  z-index: 99;
+  transition: background .5s;
+  cursor: pointer; }
+
+.tab {
+  float: left;
+  position: relative; }
+  .tab ul li {
+    list-style: none;
+    display: inline-block;
+    width: 146px;
+    height: 35px;
+    position: relative;
+    z-index: 1;
+    line-height: 35px;
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: url(https://mall-res.momentcam.net/Images/mo/v2/beauty/tabs.png?v=1);
+    background-repeat: no-repeat; }
+    .tab ul li:nth-child(1) {
+      background-position: -10px -99px; }
+    .tab ul li:nth-child(1).active {
+      background-position: -10px -144px; }
+    .tab ul li:nth-child(2) {
+      background-position: -5px -5px;
+      left: -34px;
+      z-index: 2; }
+    .tab ul li:nth-child(2).active {
+      background-position: -5px -52px; }
+    .tab ul li.eyes, .tab ul li.beard {
+      background-position: -5px -5px; }
+    .tab ul li.eyes.active, .tab ul li.beard.active {
+      background-position: -5px -52px; }
+    .tab ul li:nth-child(3) {
+      background-position: -5px -5px;
+      left: -63px;
+      z-index: 1; }
+    .tab ul li:nth-child(3).active {
+      background-position: -5px -52px; }
+    .tab ul li.active {
+      z-index: 3;
+      color: black;
+      cursor: default; }
+
+.topContainer, .bottomContainer {
+  width: 100%;
+  position: relative;
+  float: left;
+  background-color: white;
+  padding: 6px 50px 3px 50px;
+  min-height: 385px; }
+  .BeautyLeft .bottomContainer{
+    min-height: 200px;
+    max-height: 204px;
+ }
+  .topContainer .blurEdge, .bottomContainer .blurEdge {
+    width: 60px;
+    height: 187px;
+    position: absolute;
+    right: -2px;
+    background: white;
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -ms-filter: blur(6px);
+    -o-filter: blur(6px);
+    filter: blur(6px);
+    z-index: 99; }
+
+.boxShadow {
+  box-shadow: 4px 4px 7px -2px #a19fa1; }
+
+.part {
+  overflow: auto;
+  min-width: 1270px; }
+#part2{
+    max-width:1380px;
+}
+.bottomPart {
+  margin-top: 32px; }
+
+.topPart, .bottomPart {
+  position: relative;
+  overflow: hidden;
+  padding: 0 5px 5px; }
+
+.iconContainer {
+  width: 100%;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: auto;
+  background-color: white;
+  float: left;
+  clear: left;
+  padding-right: 10px; }
+
+.swiper-container-assets {
+  overflow-x: auto;
+  overflow-y: hidden; }
+
+.swiper-button-prev {
+  cursor: pointer;
+  left: 16px !important;
+  background-image: url(https://mall-res.momentcam.net/Images/mo/v2/beauty/product_left_normal.png); }
+
+.swiper-button-next {
+  cursor: pointer;
+  right: 16px !important;
+  background-image: url(https://mall-res.momentcam.net/Images/mo/v2/beauty/product_right_normal.png); }
+
+.BeautyRight {
+  background: white;
+  position: relative;
+  margin-left: 30px;
+  float: right; }
+  .BeautyRight .fairShow {
+    width: 495px;
+    height: 695px;
+    box-sizing: border-box;
+    border: 10px solid white; }
+
+.swiper-container-assets > div {
+  position: relative;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 2px 0 0 2px;
+  height: 311px; }
+  #bottomAssetsContainer.swiper-container-assets > div {
+  height: 108px; }
+  .swiper-container-assets > div .iconWrapper {
+    width: 90px;
+    height: 91px;
+    min-height: 90px;
+    float: left;
+    border: 1px solid #d2d2d2;
+    transition: border-color 0.4s;
+    margin: 0 20px 12px 0;
+    cursor: pointer;
+    object-fit: cover; }
+    .swiper-container-assets > div .iconWrapper img {
+      display: block;
+      width: 100%;
+      object-fit: cover; }
+
+.iconWrapper img {
+  border: 1px solid transparent;
+  display: block;
+  object-fit: contain;
+  transition: all .3s;
+  min-height: 90px; }
+  .iconWrapper img:hover {
+    border: 1px solid #b72a3d;
+    cursor: pointer;
+    box-sizing: border-box; }
+  .iconWrapper img.active {
+    border: 2px solid #b72a3d;
+    cursor: default; }
+
+.BeautyLeft .kuang {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  z-index: -1;
+  border: 2px solid white; }
+
+.BeautyLeft .chooseType {
+  width: 464px;
+  height: 86px;
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 15px; }
+  .BeautyLeft .chooseType .type {
+    float: left;
+    width: 70px;
+    height: 86px;
+    cursor: pointer;
+    overflow: hidden; }
+    .BeautyLeft .chooseType .type p {
+      font-size: 14px;
+      color: white;
+      margin-top: 2px;
+      display: none; }
+    .BeautyLeft .chooseType .type.a {
+      background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_1.png) no-repeat; }
+      .BeautyLeft .chooseType .type.a.active {
+        background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_1_click.png) no-repeat; }
+    .BeautyLeft .chooseType .type.b {
+      background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_2.png) no-repeat; }
+      .BeautyLeft .chooseType .type.b.active {
+        background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_2_click.png) no-repeat; }
+    .BeautyLeft .chooseType .type.c {
+      background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_3.png) no-repeat center top; }
+      .BeautyLeft .chooseType .type.c.active {
+        background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_3_click.png) no-repeat center top; }
+      .BeautyLeft .chooseType .type.c img {
+        margin: 18px auto 0; }
+    .BeautyLeft .chooseType .type.d {
+      background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_4.png) no-repeat; }
+      .BeautyLeft .chooseType .type.d.active {
+        background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_4_click.png) no-repeat; }
+      .BeautyLeft .chooseType .type.d img {
+        margin: 18px 0 0 19px; }
+    .BeautyLeft .chooseType .type.e {
+      background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_5.png) no-repeat; }
+      .BeautyLeft .chooseType .type.e.active {
+        background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_5_click.png) no-repeat; }
+      .BeautyLeft .chooseType .type.e img {
+        margin: 18px 0 0 19px; }
+    .BeautyLeft .chooseType .type.f {
+      background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_5.png) no-repeat; }
+      .BeautyLeft .chooseType .type.f.active {
+        background: url(https://mall-res.momentcam.net/Images/mo/Beauty/makeup_sort_5_click.png) no-repeat; }
+      .BeautyLeft .chooseType .type.f img {
+        margin: 18px 0 0 19px; }
+    .BeautyLeft .chooseType .type img {
+      display: block;
+      width: 40px;
+      margin-top: 18px;
+      margin-left: 10px; }
+    .BeautyLeft .chooseType .type.active p {
+      display: block; }
+
+.BeautyLeft .fairList {
+  padding: 5px 10px;
+  font-size: 0;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  background-size: contain;
+  display: inline-block;
+  text-align: left;
+  width: 99%; }
+  .BeautyLeft .fairList .title {
+    font-size: 14px;
+    color: #232323;
+    background: white;
+    position: absolute;
+    left: 14px; }
+  .BeautyLeft .fairList .fairColor {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align: top;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer; }
+    .BeautyLeft .fairList .fairColor img {
+      display: block;
+      width: 100%; }
+
+.BeautyLeft .modelsBox {
+  width: 100%;
+  height: 558px;
+  margin-bottom: 20px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative; }
+
+.BeautyLeft .modelsBox::-webkit-scrollbar {
+  display: none; }
+
+.ProductLeft {
+  width: auto;
+  padding-right: 5px;
+  padding-bottom: 6px; }
+
+.CoverMask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: none;
+  background: rgba(255, 255, 255, 0); }
+
+.productContainer {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: auto;
+  background-color: white;
+  float: left;
+  clear: left;
+  padding: 0;
+  min-height: auto !important; }
+  .productContainer p {
+    margin: 20px 0 12px 26px;
+    text-align: left;
+    font-size: 20px;
+    color: #333333; }
+  .productContainer .productContainer-swiper {
+    font-size: 0;
+    position: relative;
+    box-sizing: border-box;
+    background-size: contain;
+    display: inline-block;
+    text-align: left;
+    width: 99%;
+    padding: 0 40px 7px 40px; }
+    .productContainer .productContainer-swiper .pWrapper {
+      width: 100%;
+      overflow: auto;
+      padding-bottom: 15px; }
+      .productContainer .productContainer-swiper .pWrapper .swiper-slide {
+        width: 90px;
+        height: 90px;
+        display: inline-block;
+        margin-right: 20px;
+        box-sizing: border-box;
+        border: 1px solid #c2c2c2;
+        transition: border .3s; }
+        .productContainer .productContainer-swiper .pWrapper .swiper-slide:nth-last-of-type(1) {
+          margin-right: 0; }
+        .productContainer .productContainer-swiper .pWrapper .swiper-slide:hover {
+          cursor: pointer;
+          border: 1px solid #b72a3d; }
+        .productContainer .productContainer-swiper .pWrapper .swiper-slide.active {
+          cursor: default;
+          border: 2px solid #b72a3d; }
+  .productContainer .swiper-button-prev, .productContainer .swiper-button-next {
+    top: 86px !important;
+    cursor: pointer; }
+
+.themeThumbContainer {
+  position: relative;
+  float: left;
+  background-color: white;
+  clear: left;
+  margin-top: 72px;
+  padding-top: 0; }
+  .themeThumbContainer .themeNav {
+    position: relative;
+    text-align: left;
+    height:52px;
+    padding:2px;
+    margin:30px 0;
+  }
+  .themeThumbContainer .themeNav li{
+      float:left;
+      min-width:100px;
+      line-height: 48px;
+      overflow:hidden;
+  }
+    /*.themeThumbContainer .themeNav ul {
+      position: relative;
+      margin-bottom: 18px; }*/
+      /*.themeThumbContainer .themeNav ul li {
+        display: inline-block;
+        vertical-align:middle;
+        color: #666666;
+        margin-right: 18px;
+        border-bottom: transparent 1px solid;
+        cursor: pointer;
+        padding: 0 8px 4px;
+        font-size: 20px;
+        position: relative; }
+        .themeThumbContainer .themeNav ul li:hover {
+          color: black; }
+        .themeThumbContainer .themeNav ul li:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          height: 0;
+          width: 100%;
+          display: block;
+          transition: .2s;
+          background-color: #b72a3d;
+          height: 2px;
+          transform: scale(0); }
+        .themeThumbContainer .themeNav ul li:hover:after {
+          transform: scale(1); }
+        .themeThumbContainer .themeNav ul li.active {
+          cursor: default !important;
+          border-bottom: #b72a3d 2px solid;
+          color: black; }
+        .themeThumbContainer .themeNav ul li:nth-child(1) span:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: -25px;
+          top: 1px;
+          background: url(https://mall-res.momentcam.net/Images/mo/v2/icon_random.png);
+          width: 24px;
+          height: 24px; }
+        .themeThumbContainer .themeNav ul li:nth-child(1) span:after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          right: -25px;
+          top: -5px;
+          background: url(https://mall-res.momentcam.net/Images/mo/v2/line_shadow.png);
+          width: 6px;
+          height: 40px;
+          vertical-align: top;
+          margin-right: 10px; }
+        .themeThumbContainer .themeNav ul li:nth-child(2).active {
+          cursor: pointer; }
+        .themeThumbContainer .themeNav ul li.themeActive {
+          cursor: pointer !important;
+          border-bottom: #b72a3d 2px solid;
+          color: black; }*/
+  .themeThumbContainer .themeThumbWrapper {
+    position: relative;
+    margin-left: 0px;
+    white-space: normal;
+    min-height: 338px; }
+    .themeThumbContainer .themeThumbWrapper #themeContainer {
+      width: 100%;
+      height: 100%; }
+      .themeThumbContainer .themeThumbWrapper #themeContainer .swiper-wrapper {
+        overflow: auto; }
+        .themeThumbContainer .themeThumbWrapper #themeContainer .swiper-wrapper .swiper-slide {
+          height: 320px;
+          top: 0 !important; }
+          .themeThumbContainer .themeThumbWrapper #themeContainer .swiper-wrapper .swiper-slide .iconWrapper {
+            width: 92px;
+            height: 92px; }
+  .themeThumbContainer .swiper-button-prev {
+    left: -30px !important;
+    top: 146px !important; }
+  .themeThumbContainer .swiper-button-next {
+    right: -30px !important;
+    top: 146px !important; }
+
+.searchContent {
+  position: relative;
+  width: 36px;
+  height:48px;
+  line-height:48px;
+  text-align:right;
+  float:right; }
+  .searchContent input {
+    display:inline-block;
+    vertical-align:middle;
+    width: 100%;
+    height: 48px;
+    margin-left: 10px;
+    line-height: 48px;
+    border:none;
+    border-bottom: 1px solid #b72a3d;
+    transition: .2s cubic-bezier(.4,0,.2,1);
+    outline: none;
+    font-size: 20px; }
+  .searchContent input.active{
+      display:none;
+  }
+  .searchContent input.active~.inputClear{
+      display:none;
+  }
+  .searchContent .inputClear{
+      width:36px;
+      height:36px;
+      position:absolute;
+      top:6px;
+      right:0;
+      cursor:pointer;
+      background: url(https://mall-res.momentcam.net/Images/mo/Beauty/ic_close.png);
+  }
+  .searchContent .autocomplete-suggestions{
+      line-height:30px;
+  }
+  .searchContent span {
+    display:inline-block;
+    vertical-align:middle;
+    width: 36px;
+    height: 36px;
+    background: url(https://mall-res.momentcam.net/Images/mo/Beauty/ic_search.png);
+    cursor: pointer; }
+  .searchContent ::-webkit-input-placeholder {
+    font-size: 15px; }
+
+.circle {
+  display: none;
+  position: absolute;
+  animation: spinner-spin12 1.2s steps(12) infinite;
+  height: 32px;
+  width: 32px;
+  background-image: url("data:image/png;base64,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"); }
+
+@-moz-keyframes spinner-spin12 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes spinner-spin12 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spinner-spin12 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+a {
+  text-decoration: none; }
+
+.buttonGroup, .resetGroup {
+  position: absolute;
+  top: 650px;
+  width: 130px;
+  right: 0; }
+  .buttonGroup .a, .resetGroup .a {
+    display: block; }
+  .buttonGroup .b, .resetGroup .b {
+    display: none;
+    position: relative;
+    top: 0; }
+  /*.buttonGroup .NextBtn:hover, .resetGroup .NextBtn:hover {
+    background: #971b2b; }
+  .buttonGroup .Buy:hover, .resetGroup .Buy:hover {
+    background: #971b2b; }*/
+  .buttonGroup .Share, .resetGroup .Share {
+    background-color: #2a4eb7; }
+    .buttonGroup .Share:hover, .resetGroup .Share:hover {
+      background-color: #406be6; }
+
+.resetGroup {
+  left: 0;
+  top: 0px !important; }
+  .resetGroup .a .NextBtn, .resetGroup .b .NextBtn {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #fff;
+    border: none;
+    color: #b72a3d;
+    transition: all .3s; }
+    /*.resetGroup .a .NextBtn:hover, .resetGroup .b .NextBtn:hover {
+      background-color: #b72a3d;
+      color: white; }*/
+  .resetGroup .a {
+    margin-bottom: 15px; }
+  .resetGroup .b {
+    display: block !important; }
+
+.loading {
+  width: 430px !important;
+  margin-left: -215px !important; }
+  .loading img {
+    width: 42px !important;
+    height: 52px !important; }
+  .loading p {
+    font-size: 20px !important; }
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px transparent;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #c2c2c2; }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #c2c2c2; }

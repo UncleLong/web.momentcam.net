@@ -1,0 +1,131 @@
+﻿* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px transparent;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #c2c2c2; }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #c2c2c2; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+html, body {
+  width: 100%;
+  height: 100%;}
+
+body {
+  box-sizing: border-box;
+  padding-top: 50px;
+  overflow: scroll;    
+  background: #f3f3f3; }
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  position: relative; }
+.container .resetGroup {
+    position: fixed;
+    top: 50px;
+    width: 130px;
+    left: 0; }
+    .container .resetGroup .a {
+      display: block; }
+      .container .resetGroup .a .NextBtn {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        background-color: transparent;
+        border: 2px solid #b72a3d;
+        border-left: none;
+        color: #b72a3d;
+        transition: all .3s;
+        width: 130px;
+        height: 44px;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 16px;
+        color: #b72a3d;
+        line-height: 40px; }
+      /*.container .resetGroup .a .NextBtn:hover {
+        background: #971b2b;
+        color: white; }*/
+      .picBox{
+          margin: 0 auto;
+          width: 960px;
+          height:100%;
+          overflow:hidden;
+          text-align: center;
+          position: relative;
+          padding-bottom:50px;
+          box-sizing:border-box;
+      }
+      .picBox .Model{
+          float:left;
+          width:192px;
+          /*overflow:hidden;*/
+          margin-bottom:30px;
+      }
+      .picBox .Model .ModelImg{
+          width:160px;
+          min-height:226px;
+          box-sizing:border-box;
+          border:4px solid #fff;
+          margin:0 auto 10px;
+          background:#fff;
+      }
+      .picBox .Model .ModelImg img{
+          display:block;
+          width:100%;
+      }
+        .picBox .Model .LoadBtn {
+            display:block;
+            width: 120px;
+            height: 32px;
+            text-align: center;
+            line-height: 32px;
+            border-radius: 4px;
+            background: #b72a3d;
+            color: #fff;
+            font-size: 14px;
+            margin: 0 auto;
+            cursor: pointer;
+            -moz-transition: all .3s;
+            -o-transition: all .3s;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+            position:relative;
+        }
+      /*.picBox .Model .LoadBtn:hover{
+          background:#971b2b;
+      }*/
+      .picBox .Model .LoadBtn img{
+          display:block;
+          width:100%;
+          height:100%;
+          position:absolute;
+          left:0;
+          top:0;
+          z-index:99;
+          opacity:0;
+      }

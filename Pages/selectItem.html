@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MomentCam</title>
+    <link rel="stylesheet" type="text/css" href="../css/Upload.css?v=d332" />
+    <link href="../css/orderPart.css" rel="stylesheet" />
+    <link href="../css/beauty.css" rel="stylesheet" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style type="text/css">
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css);
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <style>
+        * {
+            font-family: Roboto, sans-serif;
+        }
+
+        .demo-body {
+            padding: 24px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .demo-content > button {
+            margin-bottom: 6px;
+        }
+
+        .mdc-theme--dark {
+            background-color: #303030;
+        }
+
+        section.demo-content {
+            padding: 24px;
+        }
+
+        .catalog-dialog-demo {
+            position: relative;
+            width: 320px;
+        }
+
+        .dialog-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mdc-theme--dark, .section-dark-theme {
+            background: #262626;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainBox">
+        <div class="main">
+            <div id="part2" class="part Beauty">
+                <div class="BeautyRight">
+                    <div class="fairShow boxShadow">
+                        <!--<img src=""  />-->
+                        <div class="fairPicShow">
+                            <img src="https://mall-res.momentcam.net/Images/mo/loading_gif.gif" class="loading" />
+                            <img src="" name="renderResult" />
+                        </div>
+                    </div>
+                    <div class="resetGroup" style="width:194px;position:fixed;right:130px;bottom:200px!important;left:auto;top:auto!important;z-index:99;">
+                        <div class="a">
+                            <div class="NextBtn mdc-button mdc-button--raised" style="width:194px;border-radius:6px;padding:0;font-size:0;text-align:left;">
+                                <img style="width:36px;display:inline-block;vertical-align:middle;margin:0 10px;" src="https://mall-res.momentcam.net/Images/mo/Beauty/ic_arrow_back.png" />
+                                <span style="display:inline-block;vertical-align:middle;font-size:14px;">Előző</span>
+                            </div>
+                        </div>
+                        <div class="b">
+                            <div class="NextBtn mdc-button mdc-button--raised" style="width:194px;border-radius:6px;padding:0;font-size:0;text-align:left;">
+                                <img style="width:36px;display:inline-block;vertical-align:middle;margin:0 10px;" src="https://mall-res.momentcam.net/Images/mo/Beauty/ic_refresh.png" />
+                                <span style="display:inline-block;vertical-align:middle;font-size:14px;">Új kép betöltése</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonGroup" style="width:194px;position:fixed;top:auto;bottom:126px;right:130px;z-index:99;">
+                        <div class="b" style="display:block;">
+                            <div class="Buy mdc-button mdc-button--raised" style="width:194px;border-radius:6px;padding:0;font-size:0;text-align:left;">
+                                <img style="width:36px;display:inline-block;vertical-align:middle;margin:0 10px;" src="https://mall-res.momentcam.net/Images/mo/Order/ic_shopping_cart_white.png" />
+                                <a href="javascript:void(0);" style="display:inline-block;vertical-align:middle;font-size:14px;color:#fff;">Vásárlás</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ProductLeft">
+                    <div class="productContainer topContainer boxShadow">
+                        <p>Termékek</p>
+                        <div class="productContainer-swiper swiper-container ">
+                            <div class="pWrapper swiper-wrapper dragscroll">
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src='https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_paper.png' data-id="3311530" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src='https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_phonecase.png' data-id="3310657" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src='https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_mugs.png' data-id="3309427" />
+                                </div>
+                                <!--<div class="swiper-slide">
+                                    <img class='swiper-lazy' src='https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_mugs.png' data-id="47263" />
+                                </div>-->
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src="https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_synthetic.png" data-id="3310273" />
+                                </div>
+                                <!--<div class="swiper-slide">
+                                    <img class='swiper-lazy' src="https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_coffeecup.png" data-id="177577" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src="https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_lightframe.png" data-id="3312235" />
+                                </div>-->
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src="https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_tshirt.png" data-id="3310507" />
+                                </div>
+                                <!--<div class="swiper-slide">
+                                    <img class='swiper-lazy' src="https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_tshirt.png" data-id="47071" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src="https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_whiteframe.png" data-id="101443" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src="https://mall-res.momentcam.net/Images/mo/ChooseComic/cartoons_content_blackframe.png" data-id="177481" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src="https://mall-res.momentcam.net/Images/mo/ChooseComic/baowenbei.png" data-id="177484" />
+                                </div>-->
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src="https://mall-res.momentcam.net/Images/mo/ChooseComic/panzi.png" data-id="3311203" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class='swiper-lazy' src="https://mall-res.momentcam.net/Images/mo/ChooseComic/pingtu.png" data-id="3310912" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev">
+
+                        </div>
+                        <div class="swiper-button-next">
+
+                        </div>
+                    </div>
+
+                    <div class="themeThumbContainer bottomContainer boxShadow">
+                        
+                        <div class="themeNav">
+                            <ul id="basic-tab-bar" class="mdc-tab-bar mdc-tab-bar-upgraded" style="margin:0;float:left;">
+                                <li class="mdc-button mdc-button--raised" style="float:left;height:48px;line-height: 48px;margin-right:10px;">
+                                    <img style="width:24px;display:inline-block;vertical-align:middle;margin-right:10px;" src="https://mall-res.momentcam.net/Images/mo/v2/icon_random.png" />
+                                    <span style="display:inline-block;vertical-align:middle;">Random</span>
+                                </li>
+                                <li class="active mdc-tab mdc-ripple-upgraded mdc-tab--active">Legújabbak</li>
+                                <li class="mdc-tab mdc-ripple-upgraded">Kedvencek</li>
+                                <li class="mdc-tab-bar__indicator"></li>
+                            </ul>
+                            <div class="searchContent">
+                                <span></span>
+                                <input type="text" class="active" id="autocomplete" placeholder="Keresés" />
+                                <div class="inputClear"></div>
+                            </div>
+                        </div>
+                        <div class="themeThumbWrapper">
+                            <div class="swiper-container" id="themeContainer">
+                                <div class="swiper-wrapper swiper-container-assets dragscroll">
+
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev">
+
+                            </div>
+                            <div class="swiper-button-next">
+
+                            </div>
+                        </div>
+                        <p id="noFavoriteTip" style="margin-top:100px;display:none;">You have no favorite yet !</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="CoverMask"></div>
+            <aside id="mdc-dialog-default" class="mdc-dialog" role="alertdialog" aria-hidden="true" aria-labelledby="mdc-dialog-default-label" aria-describedby="mdc-dialog-default-description" style="opacity:0;">
+                <div class="mdc-dialog__surface">
+                    <header class="mdc-dialog__header">
+                        <h2 id="mdc-dialog-default-label" class="mdc-dialog__header__title" style="text-align:left;">
+                            Figyelem!
+                        </h2>
+                    </header>
+                    <section id="mdc-dialog-default-description" class="mdc-dialog__body" style="text-align:left;"></section>
+                    <footer class="mdc-dialog__footer">
+                        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel mdc-ripple-upgraded">OK</button>
+                    </footer>
+                </div>
+                <div class="mdc-dialog__backdrop"></div>
+            </aside>
+            <button id="default-dialog-activation" class="mdc-button mdc-button--primary mdc-button--raised mdc-ripple-upgraded" style="display:none;"></button>
+            <div class="confirm" style="display: none;">
+                <div class="ReleaseFaile">
+                    <p>
+
+                    </p>
+                    <div class="FaileSure">Kilépés</div>
+                    <div class="sSure">Törlés</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input style="opacity: 0;" id="file" type="file" />
+    <canvas id="canvas" width=300 style="display:none;position:absolute;top:10px;left:10px;z-index:9999"></canvas>
+    <script src="https://mall-res.momentcam.net/lib/jquery.min.js"></script>
+    <script src="../js/jquery.autocomplete.fixed.js?v=1"></script>
+    <script src="https://mall-res.momentcam.net/lib/Cookie.js"></script>
+    <script src="../js/config.js?V=b1"></script>
+    <script src="https://mall-res.momentcam.net/lib/loading.js"></script>
+    <script src="../js/v2/lib/overflow.js"></script>
+    <script src="../js/v2/lib/dragscroll.js"></script>
+    <script src="../js/v2/address.js"></script>
+    <script src="../js/v2/coupon.js"></script>
+    <script src="../js/v2/p.js"></script>
+    <script src="../js/v2/thumbHandle.js?v=h4"></script>
+    <script src="../js/v2/search.js"></script>
+    <script src="../js/v2/Pub.js?V=3"></script>
+    <script src="../js/material/material-components-web.js"></script>
+    <script src="../js/material/material-components-web.css.js"></script>
+    <script src="../js/material/style.css.js"></script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+        // Insert Your Facebook Pixel ID below.
+        if (fbq) {
+            fbq('init', '397862557243875');
+            fbq('track', 'PageView');
+        }
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=397862557243875&amp;ev=PageView&amp;noscript=1" />
+    </noscript>
+    <script>
+        $(window).bind("pageshow", function (event) {
+            if (event.originalEvent.persisted) {
+                window.location.reload()
+            }
+        });
+    </script>
+    <script>
+        $(function () {
+            BindEvent.init();
+            ProductThumb.init();
+            Theme.init();
+            window.parent.history.pushState(null, null, "Index.html?name=chooseItem");
+            //左右切换按钮
+            $(".pWrapper").parent().siblings(".swiper-button-prev").css("background-image", "url(https://mall-res.momentcam.net/Images/mo/v2/beauty/beauty_makeup_left_disabled.png)");
+            $(".pWrapper").parent().siblings(".swiper-button-next").css("background-image", "url(https://mall-res.momentcam.net/Images/mo/v2/beauty/beauty_makeup_right_normal.png)");
+            $(".pWrapper").scroll(function () {
+                var result = "";
+                $.each($(".pWrapper .swiper-slide"), function (i, e) {
+                    result += " " + checkInView($(e), false, $(".pWrapper"));
+                });
+                var firstWord = result.substr(0, 4), endWord = result.substr(result.length - 4);
+                console.log(result);
+                changeBtns(firstWord, endWord, $(".pWrapper"));
+            });
+            $("body").unbind("click").on("click", function () {
+                try {
+                    window.parent.hiding($(this));
+                } catch (e) {
+
+                }
+            });
+            var dialog = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-default'));
+            dialog.listen('MDCDialog:accept', function () {
+                console.log('accepted');
+            });
+            dialog.listen('MDCDialog:cancel', function () {
+                console.log('canceled');
+            });
+            document.querySelector('#default-dialog-activation').addEventListener('click', function (evt) {
+                dialog.lastFocusedTarget = evt.target;
+                dialog.show();
+            });
+            (function () {
+                setTimeout(function () {
+
+                    window.basicTabBar = new mdc.tabs.MDCTabBar(document.querySelector('#basic-tab-bar'));
+
+                }, 200)
+            })();
+        });
+    </script>
+</body>
+
+</html>

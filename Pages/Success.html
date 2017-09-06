@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/orderPart.css?v=12" />
+    
+    <link href="../js/material/material.indigo-pink.min.css" rel="stylesheet" />
+    <style>
+        *{
+            font-family: Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="Success">
+        <img src="https://mall-res.momentcam.net/Images/mo/Order/orders_detail_pay_successful1.png" />
+        <h3>Köszönjük, hogy a MomentCam-nél vásároltál!</h3>
+        <span class="orderId">Rendelésazonosító: <span id="orderid"></span></span>
+        <p id="tip" style="display:none;">Mentsd el a rendelésazonosítód arra az esetre, ha később bármilyen kérdésed merülne fel a rendeléseddel kapcsolatban. A digilis karikatúrád hamarosan megérkezik a megadott e-mail címre!
+</p>
+        <div class="OK mdc-button mdc-button--raised">
+            <a href="javascript:void(0);">Back to MomentCam</a>
+        </div>
+    </div>
+    <script src="https://mall-res.momentcam.net/lib/jquery.min.js"></script>
+    <script src="https://mall-res.momentcam.net/lib/Cookie.js"></script>
+    <script src="../js/paySuccess.js"></script>
+    <script src="../js/material/material.min.js"></script>
+    <script src="../js/material/material-components-web.css.js"></script>
+    <script src="../js/material/style.css.js"></script>
+    <script>
+        window.parent.parent.history.pushState(null, null, "Index.html?name=checkOrder");
+    </script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+        // Insert Your Facebook Pixel ID below.
+        if (fbq) {
+            fbq('init', '397862557243875');
+            fbq('track', 'PageView');
+        }
+    </script>
+    <!-- Insert Your Facebook Pixel ID below. -->
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=397862557243875&amp;ev=PageView&amp;noscript=1" />
+    </noscript>
+</body>
+</html>

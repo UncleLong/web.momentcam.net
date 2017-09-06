@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*-webkit-user-select: none;
+            user-select: none;*/
+        }
+        html{
+            width: 100%;
+            height:100%;
+        }
+        body {
+            position:absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height:100%;
+            overflow-x:hidden;
+            overflow-y:scroll;
+            background: #F3F3F3;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .main {
+            width: 1210px;
+            height: 800px;
+            margin: 100px auto 30px;
+            padding:0 70px;
+            box-sizing:border-box;
+            background: #fff;
+            -webkit-box-shadow: 0 0 10px #ccc;
+            -moz-box-shadow: 0 0 10px #ccc;
+            box-shadow: 0 0 10px #ccc;
+            position:relative;
+        }
+        .main .payable{
+            width:100%;
+            font-size:0;
+            text-align:right;
+            position:absolute;
+            top:-70px;
+            right:0;
+        }
+        .main .payable span{
+            display:inline-block;
+            vertical-align:middle;
+        }
+        .main h3{
+            width:100%;
+            height:60px;
+            line-height:65px;
+            font-size:22px;
+            color:#232323;
+            border-bottom:1px solid #e0e0e0;
+        }
+        .main .choosePayType{
+            width:100%;
+            padding:0 10px;
+            box-sizing:border-box;
+            margin-top:15px;
+        }
+        .main .choosePayType .PayType{
+            width:100%;
+            height:100px;
+            border-top:1px solid #fff;
+            border-left:1px solid #fff;
+            border-right:1px solid #fff;
+            border-bottom:1px solid #e0e0e0;
+            cursor:pointer;
+        }
+        .main .choosePayType .PayType.active{
+            border:1px solid #b52b3c;
+        }
+        .main .choosePayType .PayType.active .PayCount{
+            display:block;
+        }
+        .main .choosePayType .PayType .PayPic{
+            width:78px;
+            height:78px;
+            float:left;
+            margin:10px 20px;
+            background:red;
+        }
+        .main .choosePayType .PayType .PayPic img{
+            display:block;
+            width:100%;
+        }
+       .main .choosePayType .PayType .PayTypeName{
+           float:left;
+           height:100px;
+           line-height:100px;
+           font-size:22px;
+           color:#232323;
+       }
+       .main .choosePayType .PayType .PayCount{
+           float:right;
+           height:100px;
+           line-height:100px;
+           display:none;
+       }
+       .main .PaySubmit{
+           width:320px;
+           height:54px;
+           font-size:28px;
+           color:#fff;
+           text-align:center;
+           line-height:54px;
+           float:right;
+           background:#b52b3c;
+           margin-top:50px;
+           cursor:pointer;
+       }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="payable">
+            <span style="margin-right:20px;font-size:18px;color:#000;">Total Price:</span>
+            <span class="payMoney" style="margin-top:-2px;font-size:28px;color:#b52b3c;">$69.80</span>
+            <!--<span style="font-size:18px;color:#000;">元</span>-->
+        </div>
+        <h3>Fizetési mód</h3>
+        <div class="choosePayType">
+            <div class="PayType active">
+                <div class="PayPic">
+                    <img src="" />
+                </div>
+                <div class="PayTypeName">
+                </div>
+                <div class="PayCount">
+                    <span style="font-size:18px;color:#232323;">Fizetek</span>
+                    <span class="payMoney" style="font-size:28px;color:#b52b3c;margin-right:20px;">$69.80</span>
+                    <!-- <span style="font-size:18px;color:#232323;">元</span>-->
+                </div>
+            </div>
+            <div class="PayType">
+                <div class="PayPic">
+                    <img src="" />
+                </div>
+                <div class="PayTypeName">
+                    Bankkártya
+                </div>
+                <div class="PayCount">
+                    <span style="font-size:18px;color:#232323;">Fizetek</span>
+                    <span class="payMoney" style="font-size:28px;color:#b52b3c;margin-right:20px;">$69.80</span>
+                   <!-- <span style="font-size:18px;color:#232323;">元</span>-->
+                </div>
+            </div>
+        </div>
+        <div class="PaySubmit">Fizetek</div>
+    </div>
+</body>
+</html>

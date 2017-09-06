@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../css/home.css?v=2" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" async rel="stylesheet">
+    <style>
+        body{
+                background-position: center 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" style="width:100%;height:100%;display:none;"></div>
+    <div class="wrapper">
+        <div class="logo">
+            <div class="button">
+                <i class="sprite-icon_creat_female"><span></span></i>
+                <i class="feBlink blink"></i>
+                <i class="sprite-icon_creat_male"><span></span></i>
+                <i class="mblink blink"></i>
+            </div>
+        </div>
+    </div>
+    <script src="https://mall-res.momentcam.net/lib/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".sprite-icon_creat_female").on("click", function () {
+                localStorage.setItem('gender',2);
+                window.location = "upload.html?V=" + Date.now();
+            });
+            $(".sprite-icon_creat_male").on("click", function () {
+                localStorage.setItem('gender', 1);
+                window.location = "upload.html?V=" + Date.now();
+            });
+            $("body").unbind("click").on("click", function () {
+                window.parent.hiding($(this));
+                return false;
+            });
+        });
+    </script> 
+</body>
+</html>

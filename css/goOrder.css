@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  font-family:"Roboto";
+}
+
+body {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-color: #f3f3f3; }
+
+.loading img {
+  width: 42px !important;
+  height: 52px !important;
+  margin: 0 auto; }
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+  position: relative; }
+  .container .leftPart {
+    display: inline-block;
+    vertical-align: top;
+    width: 293px;
+    /*height:369px;*/
+    overflow: hidden;
+    position: relative;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    /*-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);*/ }
+    .container .leftPart img#showGoodPic {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+      margin: 0 auto;
+      display: none; }
+  .container .rightPartHalf {
+    display: inline-block;
+    vertical-align: top;
+    width: 610px;
+    text-align: left; 
+    padding-top:48px;
+  }
+    .container .rightPartHalf h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #232323; }
+    .container .rightPartHalf .FromWho {
+      font-size: 14px;
+      margin: 3px 0 18px; }
+    .container .rightPartHalf .line {
+      width: 610px;
+      height: 1px;
+      background: #dfdfdf;
+      margin-bottom: 20px; }
+    .container .rightPartHalf .specList {
+      width: 100%; }
+      .container .rightPartHalf .specList .spec {
+        width: 100%;
+        font-size: 0;
+        margin-bottom: 10px; }
+        .container .rightPartHalf .specList .spec label {
+          display: inline-block;
+          vertical-align: top;
+          width: 120px;
+          height: 32px;
+          line-height: 32px;
+          text-align: left;
+          font-size: 14px;
+          color: #999; }
+        .container .rightPartHalf .specList .spec .specBox {
+          display: inline-block;
+          vertical-align: top;
+          width: 430px;
+          height: 32px;
+          line-height: 32px;
+          box-sizing: border-box;
+          border: 1px solid #d1d1d1;
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: bold;
+          color: #232323;
+          outline: none;
+          text-indent: 10px;
+          position: relative; }
+          .container .rightPartHalf .specList .spec .specBox span {
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor: pointer;
+            background: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_down.png") no-repeat right 10px center; }
+          .container .rightPartHalf .specList .spec .specBox span:hover {
+            background: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_down_click.png") no-repeat right 10px center; }
+          .container .rightPartHalf .specList .spec .specBox span.active {
+            background: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_up.png") no-repeat right 10px center; }
+          .container .rightPartHalf .specList .spec .specBox span.active:hover {
+            background: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_up_click.png") no-repeat right 10px center; }
+          .container .rightPartHalf .specList .spec .specBox ul {
+            width: 430px;
+            overflow: hidden;
+            position: absolute;
+            left: -1px;
+            top: 30px;
+            z-index: 99;
+            border: 1px solid #dfdfdf;
+            border-radius: 4px;
+            box-sizing: border-box;
+            display: none;
+            background: #fff; }
+            .container .rightPartHalf .specList .spec .specBox ul li {
+              width: 100%;
+              height: 32px;
+              text-indent: 10px;
+              line-height: 32px;
+              cursor: pointer;
+              box-sizing: border-box; }
+            .container .rightPartHalf .specList .spec .specBox ul li:hover {
+              background: #ccc; }
+            .container .rightPartHalf .specList .spec .specBox ul li.selected {
+              color: #fff !important;
+              background: #b52b3c !important;
+              border: 1px solid #b52b3c !important; }
+            .container .rightPartHalf .specList .spec .specBox ul li.disabled {
+              background: #eee !important;
+              color: #ccc;
+              cursor: not-allowed; }
+    .container .rightPartHalf .NumBox {
+      width: 100%;
+      font-size: 0; }
+      .container .rightPartHalf .NumBox label {
+        display: inline-block;
+        vertical-align: top;
+        width: 120px;
+        height: 32px;
+        line-height: 32px;
+        text-align: left;
+        font-size: 14px;
+        color: #999; }
+      .container .rightPartHalf .NumBox .ChooseNum {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0; }
+        .container .rightPartHalf .NumBox .ChooseNum input {
+          display: inline-block;
+          vertical-align: middle;
+          width: 50px;
+          height: 32px;
+          border:none;
+          box-sizing: border-box;
+          border-top: 1px solid #d1d1d1;
+          border-bottom: 1px solid #d1d1d1;
+          /*border-radius: 4px;*/
+          outline: none;
+          /*margin-right: 4px;*/
+          text-align: center; }
+        .container .rightPartHalf .NumBox .ChooseNum .ControlNum {
+          display: inline-block;
+          vertical-align: middle;
+          width: 15px;
+          height: 32px; }
+          .container .rightPartHalf .NumBox .ChooseNum .reduce {
+            display: inline-block;
+            vertical-align:middle;
+            width: 32px;
+            height: 32px;
+            background:#eee;
+            font-size:20px;
+            text-align:center;
+            line-height:32px;
+            color:#999;
+            border-bottom-right-radius:2px;
+            border-top-right-radius:2px;
+            /*background-image: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_up.png");*/
+            cursor: pointer;
+            margin-bottom: 2px; }
+          /*.container .rightPartHalf .NumBox .ChooseNum .reduce:hover {
+            background: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_up_click.png"); }*/
+          .container .rightPartHalf .NumBox .ChooseNum .add {
+            display: inline-block;
+            vertical-align:middle;
+            width: 32px;
+            height: 32px;
+            background:#eee;
+            font-size:20px;
+            text-align:center;
+            line-height:32px;
+            color:#999;
+            border-bottom-left-radius:2px;
+            border-top-left-radius:2px;
+            /*background-image: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_down.png");*/
+            cursor: not-allowed; }
+          /*.container .rightPartHalf .NumBox .ChooseNum .add:hover {
+            background: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_down_click.png"); }*/
+    .container .rightPartHalf .UnitPrices {
+      width: 100%;
+      font-size: 0;
+      text-align: right;
+      margin-bottom: 10px; }
+      .container .rightPartHalf .UnitPrices span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #232323; }
+      .container .rightPartHalf .UnitPrices span:nth-child(2) {
+        width: 142px;
+        text-align: right;
+        font-size: 18px;
+        color: #b72a3a; }
+    .container .rightPartHalf .Amount {
+      width: 100%;
+      font-size: 0;
+      text-align: right;
+      margin-bottom: 10px; }
+      .container .rightPartHalf .Amount span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #232323; }
+      .container .rightPartHalf .Amount span:nth-child(2) {
+        width: 142px;
+        text-align: right;
+        font-size: 18px;
+        color: #b72a3a; }
+    .container .rightPartHalf .TotlePrices {
+      width: 100%;
+      font-size: 0;
+      text-align: right;
+      margin-bottom: 10px; }
+      .container .rightPartHalf .TotlePrices span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #b72a3a; }
+      .container .rightPartHalf .TotlePrices span:nth-child(2) {
+        width: 142px;
+        text-align: right;
+        font-size: 28px;
+        color: #b72a3a; }
+    .container .rightPartHalf .GoPayBox {
+      width: 100%;
+      /*overflow: hidden;*/
+      margin-bottom: 50px; }
+      .container .rightPartHalf .GoPayBox .GoPay {
+        width: 200px;
+        height: 42px;
+        text-align: center;
+        line-height: 42px;
+        border-radius: 4px;
+        background: #b72a3a;
+        font-size: 14px;
+        color: #fff;
+        cursor: pointer;
+        float: right;
+        margin-top: 20px;
+        transition: background .5s;
+        -moz-transition: background .5s;
+        -webkit-transition: background .5s;
+        -o-transition: background .5s; }
+      /*.container .rightPartHalf .GoPayBox .GoPay:hover {
+        background: #971b2b; }*/
+
+.cover {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.24);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999; }
+  .cover .coverMain {
+    width: 324px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .cover .coverMain h3 {
+      font-size: 14px;
+      color: #232323; }
+    .cover .coverMain p {
+      font-size: 14px;
+      color: #232323;
+      margin: 10px 0 20px; }
+    .cover .coverMain .CoverConfirm {
+      font-size: 14px;
+      font-weight: bold;
+      color: #b72a3d;
+      float: right;
+      cursor: pointer; }

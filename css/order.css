@@ -1,0 +1,764 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  font-family:"Roboto";
+}
+
+body {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  box-sizing: border-box;
+  padding-top: 50px;
+  overflow: scroll; }
+
+.loading img {
+  width: 42px !important;
+  height: 52px !important;
+  margin: 0 auto; }
+
+.container {
+  /*@import "leftPart";*/
+  margin: 0 auto;
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+  position: relative; }
+  .container .middlePart {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 340px;
+    overflow: hidden;
+    margin: 48px 33px 0;
+    display: none;
+    margin-bottom: 50px; }
+    .container .middlePart .DiscountCode {
+      width: 100%;
+      overflow: hidden;
+      padding: 10px;
+      box-sizing: border-box;
+      background: #fff;
+      border-radius: 4px; }
+      .container .middlePart .DiscountCode h3 {
+        font-size: 14px;
+        color: #b72a3d;
+        margin:0;
+        margin-bottom: 10px;
+        text-align: left; }
+      .container .middlePart .DiscountCode .CodeBox {
+        width: 100%;
+        height: 40px;}
+      .container .middlePart .DiscountCode .CodeBox #tf-box-example{
+          width:180px;
+          height:40px;
+          margin:0;
+          padding-top:12px;
+          font-size:14px;
+          margin-right:10px;
+      }
+      .container .middlePart .DiscountCode .CodeBox #tf-box-example input{
+          padding:0;
+          height:26px;
+      }
+      .container .middlePart .DiscountCode .CodeBox #tf-box-example .mdc-textfield__label{
+          bottom:10px;
+          left:0;
+      }
+        /*.container .middlePart .DiscountCode .CodeBox input {
+          display: inline-block;
+          vertical-align: top;
+          box-sizing: border-box;
+          width: 230px;
+          height: 32px;
+          border: 1px solid #999;
+          margin-right: 10px;
+          border-radius: 4px;
+          padding: 0 10px;
+          outline: none;
+          font-size: 14px;
+          -moz-transition: border .3s linear;
+          -o-transition: border .3s linear;
+          -webkit-transition: border .3s linear;
+          transition: border .3s linear; }
+        .container .middlePart .DiscountCode .CodeBox input:focus {
+          border: 1px solid #b72a3d; }*/
+        .container .middlePart .DiscountCode .CodeBox .CodeSubmit {
+          display: inline-block;
+          vertical-align: top;
+          box-sizing: border-box;
+          width: 130px!important;
+          min-width:80px;
+          padding:0;
+          height: 40px;
+          text-align: center;
+          line-height: 40px;
+          font-size: 14px;
+          color: #fff;
+          background: #b72a3d;
+          border-radius: 4px;
+          cursor: pointer; }
+    .container .middlePart .addressBox {
+      width: 100%;
+      overflow: hidden;
+      margin: 10px 0;
+      background: #fff;
+      border-radius: 4px;
+      display: none; }
+      .container .middlePart .addressBox .addressTitle {
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+        overflow: hidden;
+        font-size: 0;
+        text-align: left; }
+        .container .middlePart .addressBox .addressTitle .TipPic {
+          display: inline-block;
+          vertical-align: middle;
+          width: 32px;
+          height: 32px;
+          background-image: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_done.png");
+          background-size: cover; }
+        .container .middlePart .addressBox .addressTitle .Num {
+          display: inline-block;
+          vertical-align: middle;
+          width: 20px;
+          height: 20px;
+          margin: 0 5px 0 10px;
+          background: #b72a3d;
+          border-radius: 50%;
+          font-size: 14px;
+          text-align: center;
+          line-height: 20px;
+          color: #fff; }
+        .container .middlePart .addressBox .addressTitle .Words {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 14px;
+          font-weight: bold;
+          color: #b72a3d; }
+        .container .middlePart .addressBox .addressTitle .AddressEditBox {
+          float: right;
+          font-size: 0;
+          cursor: pointer; }
+          .container .middlePart .addressBox .addressTitle .AddressEditBox img {
+            display: inline-block;
+            vertical-align: middle; }
+          .container .middlePart .addressBox .addressTitle .AddressEditBox span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+            color: #999;
+            margin: 0 10px 0 4px; }
+      .container .middlePart .addressBox .addressTitle.Editing {
+        margin: 5px 0; }
+        .container .middlePart .addressBox .addressTitle.Editing .TipPic {
+          display: none; }
+        .container .middlePart .addressBox .addressTitle.Editing .Num {
+          background: #232323;
+          color: #fff; }
+        .container .middlePart .addressBox .addressTitle.Editing .Words {
+          color: #232323; }
+        .container .middlePart .addressBox .addressTitle.Editing .AddressEditBox {
+          display: none; }
+      .container .middlePart .addressBox .DetailList {
+        width: 320px;
+        margin: 0 auto;
+        overflow: hidden; }
+        .container .middlePart .addressBox .DetailList .AdressDetail {
+          width: 100%;
+          overflow: hidden;
+          margin-bottom: 10px;
+          border: 1px solid #d1d1d1;
+          font-size: 14px;
+          color: #232323;
+          line-height: 32px;
+          border-radius: 4px;
+          cursor: pointer;
+          padding: 0 10px; }
+          .container .middlePart .addressBox .DetailList .AdressDetail .top {
+            width: 100%;
+            height: 32px;
+            line-height: 32px;
+            border-bottom: 1px solid #d1d1d1;
+            box-sizing: border-box;
+            font-size: 14px;
+            overflow: hidden;
+            color: #232323; }
+            .container .middlePart .addressBox .DetailList .AdressDetail .top .Delete, .container .middlePart .addressBox .DetailList .AdressDetail .top .edit {
+              float: right;
+              color: #b72a3d;
+              cursor: pointer;
+              display: none; }
+            .container .middlePart .addressBox .DetailList .AdressDetail .top .edit {
+              margin-right: 10px; }
+            .container .middlePart .addressBox .DetailList .AdressDetail .top .topName {
+              float: left;
+              font-weight: bold; }
+          .container .middlePart .addressBox .DetailList .AdressDetail p {
+            text-align: left;
+            color: #999;
+            margin:0;
+            line-height: 24px; }
+          .container .middlePart .addressBox .DetailList .AdressDetail p.SeePhone {
+            margin-top: 5px; }
+          .container .middlePart .addressBox .DetailList .AdressDetail p.shipAddress {
+            margin-bottom: 5px; }
+        .container .middlePart .addressBox .DetailList .AdressDetail:hover .Delete, .container .middlePart .addressBox .DetailList .AdressDetail:hover .edit {
+          display: block; }
+        .container .middlePart .addressBox .DetailList .AdressDetail.choosed {
+          border: 1px solid #b72a3d;
+          color: #b72a3d; }
+        .container .middlePart .addressBox .DetailList .NewOrViewed {
+          width: 100%;
+          overflow: hidden;
+          padding: 8px;
+          box-sizing: border-box;
+          border: 1px solid #b72a3d;
+          border-radius: 4px;
+          margin-bottom: 10px; }
+          .container .middlePart .addressBox .DetailList .NewOrViewed h3 {
+            margin:0;
+            font-size: 14px;
+            color: #b72a3d;
+            text-align: left; }
+          .container .middlePart .addressBox .DetailList .NewOrViewed .mdc-textfield {
+            float: left;
+            height: 32px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #232323;
+            outline: none;
+            border-radius: 4px;
+            margin:0;
+            padding:0;
+            margin-top: 10px;
+            -moz-transition: border .3s linear;
+            -o-transition: border .3s linear;
+            -webkit-transition: border .3s linear;
+            transition: border .3s linear; }
+          /*.container .middlePart .addressBox .DetailList .NewOrViewed input:focus {
+            border: 1px solid #b72a3d; }*/
+          .container .middlePart .addressBox .DetailList .NewOrViewed .mdc-textfield input{
+              padding:0;
+              height:26px;
+              margin-top:6px;
+          }
+          .container .middlePart .addressBox .DetailList .NewOrViewed .mdc-textfield .mdc-textfield__label{
+          bottom:5px;
+          left:0;
+          overflow: hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;
+      }
+      .mdc-textfield__input:required + .mdc-textfield__label::after ,.mdc-textfield__input:required + .mdc-textfield__label::after{
+    content: "";
+}
+          .container .middlePart .addressBox .DetailList .NewOrViewed input.Email {
+            width: 156px;
+            /*margin-right: 10px;*/ }
+          .container .middlePart .addressBox .DetailList .NewOrViewed input.Name {
+            width: 134px; }
+          .container .middlePart .addressBox .DetailList .NewOrViewed input.Address {
+            width: 200px;
+            /*margin-right: 10px;*/ }
+          .container .middlePart .addressBox .DetailList .NewOrViewed input.Apt {
+            width: 90px; }
+          .container .middlePart .addressBox .DetailList .NewOrViewed input.City {
+            width: 80px;
+            /*margin-right: 10px;*/ }
+          .container .middlePart .addressBox .DetailList .NewOrViewed input.State {
+            width: 120px;
+            /*margin-right: 10px;*/ }
+          .container .middlePart .addressBox .DetailList .NewOrViewed input.ZipCode {
+            width: 80px; }
+          .container .middlePart .addressBox .DetailList .NewOrViewed input.PhoneNum {
+            width: 110px;
+            /*margin: 10px 10px 0;*/ }
+          .container .middlePart .addressBox .DetailList .NewOrViewed .CountyCodeBox {
+            width: 60px;
+            height: 32px;
+            position: relative;
+            float: left;
+            margin-top: 10px; }
+            .container .middlePart .addressBox .DetailList .NewOrViewed .CountyCodeBox select {
+              display: block;
+              width: 100%;
+              height: 100%;
+              font-size: 14px;
+              box-sizing: border-box;
+              border: 1px solid #d1d1d1;
+              padding: 0 10px;
+              outline: none;
+              border-radius: 4px;
+              appearance: none;
+              -moz-appearance: none;
+              -webkit-appearance: none;
+              background: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_unfold.png") no-repeat scroll right 10px center transparent; }
+          .container .middlePart .addressBox .DetailList .NewOrViewed .CountyListBox {
+            width: 110px;
+            height: 32px;
+            position: relative;
+            float: left;
+            margin-top: 10px; }
+            .container .middlePart .addressBox .DetailList .NewOrViewed .CountyListBox select {
+              display: block;
+              width: 100%;
+              height: 100%;
+              font-size: 14px;
+              box-sizing: border-box;
+              border: 1px solid #d1d1d1;
+              padding: 0 10px;
+              outline: none;
+              border-radius: 4px;
+              appearance: none;
+              -moz-transition: border .3s linear;
+              -o-transition: border .3s linear;
+              -webkit-transition: border .3s linear;
+              transition: border .3s linear;
+              -moz-appearance: none;
+              -webkit-appearance: none;
+              background: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_unfold.png") no-repeat scroll right 10px center transparent; }
+          .container .middlePart .addressBox .DetailList .NewOrViewed select::-ms-expand {
+            display: none; }
+          .container .middlePart .addressBox .DetailList .NewOrViewed select:focus {
+            border: 1px solid #b72a3d; }
+        .container .middlePart .addressBox .DetailList .CreatAdressBtn {
+          width: 100%;
+          height: 32px;
+          overflow: hidden;
+          margin-bottom: 10px;
+          border: 1px solid #d1d1d1;
+          font-size: 0;
+          text-align: center;
+          line-height: 32px;
+          cursor: pointer;
+          border-radius: 4px;
+          display: none; }
+          .container .middlePart .addressBox .DetailList .CreatAdressBtn img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px; }
+          .container .middlePart .addressBox .DetailList .CreatAdressBtn span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+            color: #232323; }
+        .container .middlePart .addressBox .DetailList .line {
+          width: 100%;
+          height: 1px;
+          background: #d1d1d1;
+          margin: 10px 0; }
+        .container .middlePart .addressBox .DetailList .SaveBtn {
+          width: 320px;
+          height: 32px;
+          border-radius: 4px;
+          background: #b72a3d;
+          font-size: 14px;
+          color: #fff;
+          text-align: center;
+          line-height: 32px;
+          margin-bottom: 10px;
+          cursor: pointer; }
+    .container .middlePart .PayBox {
+      width: 100%;
+      overflow: hidden;
+      margin: 10px 0;
+      background: #fff;
+      border-radius: 4px;
+      display: none;
+      cursor: pointer;
+      position: relative; }
+      .container .middlePart .PayBox .PayTitle {
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+        overflow: hidden;
+        font-size: 0;
+        text-align: left; }
+        .container .middlePart .PayBox .PayTitle .TipPic {
+          display: inline-block;
+          vertical-align: middle;
+          width: 32px;
+          height: 32px;
+          background-image: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_done.png");
+          background-size: cover; }
+        .container .middlePart .PayBox .PayTitle .Num {
+          display: inline-block;
+          vertical-align: middle;
+          width: 20px;
+          height: 20px;
+          margin: 0 5px 0 10px;
+          background: #b72a3d;
+          border-radius: 50%;
+          font-size: 14px;
+          text-align: center;
+          line-height: 20px;
+          color: #fff; }
+        .container .middlePart .PayBox .PayTitle .Words {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 14px;
+          font-weight: bold;
+          color: #b72a3d; }
+        .container .middlePart .PayBox .PayTitle .PayEditBox {
+          float: right;
+          font-size: 0;
+          cursor: pointer; }
+          .container .middlePart .PayBox .PayTitle .PayEditBox img {
+            display: inline-block;
+            vertical-align: middle; }
+          .container .middlePart .PayBox .PayTitle .PayEditBox span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+            color: #999;
+            margin: 0 10px 0 4px; }
+      .container .middlePart .PayBox .PayTitle.Editing {
+        margin: 5px 0; }
+        .container .middlePart .PayBox .PayTitle.Editing .TipPic {
+          display: none; }
+        .container .middlePart .PayBox .PayTitle.Editing .Num {
+          background: #232323;
+          color: #fff; }
+        .container .middlePart .PayBox .PayTitle.Editing .Words {
+          color: #232323; }
+        .container .middlePart .PayBox .PayTitle.Editing .PayEditBox {
+          display: none; }
+      .container .middlePart .PayBox .ChooseType {
+        width: 320px;
+        margin: 0 auto;
+        overflow: hidden;
+        box-sizing: border-box; }
+        .container .middlePart .PayBox .ChooseType .Nofee {
+          font-size: 14px;
+          color: #232323;
+          margin: -2px 0 5px;
+          text-align: left;
+          display: none; }
+        .container .middlePart .PayBox .ChooseType .PayPal {
+          width: 100%;
+          height: 32px;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+          font-size: 14px;
+          color: #232323;
+          padding: 0 10px;
+          line-height: 32px;
+          border: 1px solid #d1d1d1;
+          border-radius: 4px;
+          text-align: left;
+          cursor: pointer;
+          display: none;
+          background: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_paypal.png") no-repeat right 10px center;
+          -moz-transition: border .3s linear;
+          -o-transition: border .3s linear;
+          -webkit-transition: border .3s linear;
+          transition: border .3s linear;
+          position:relative;
+        }
+        .container .middlePart .PayBox .ChooseType .PayPal.choosed {
+          border: 1px solid #b72a3d;
+          color: #b72a3d; }
+        .container .middlePart .PayBox .ChooseType .CreaditCardBox {
+          width: 100%;
+          overflow: hidden;
+          display: none;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+          font-size: 14px;
+          padding: 0 10px;
+          border: 1px solid #d1d1d1;
+          border-radius: 4px;
+          cursor: pointer;
+          -moz-transition: border .3s linear;
+          -o-transition: border .3s linear;
+          -webkit-transition: border .3s linear;
+          transition: border .3s linear;
+          position:relative;
+        }
+          .container .middlePart .PayBox .ChooseType .CreaditCardBox .CreaditCardTitle {
+            width: 100%;
+            height: 32px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #d1d1d1;
+            line-height: 32px;
+            font-size: 14px; }
+            .container .middlePart .PayBox .ChooseType .CreaditCardBox .CreaditCardTitle span:nth-child(1) {
+              color: #232323;
+              float: left; }
+            .container .middlePart .PayBox .ChooseType .CreaditCardBox .CreaditCardTitle span:nth-child(2) {
+              color: #999;
+              float: right; }
+          .container .middlePart .PayBox .ChooseType .CreaditCardBox .Banks {
+            width: 100%;
+            height: 32px;
+            background: url("https://mall-res.momentcam.net/Images/mo/OrderNew/confirmorder_icon_banklogo.png") no-repeat center; }
+          .container .middlePart .PayBox .ChooseType .CreaditCardBox .InsertText {
+              display:none;
+            width: 300px;
+            overflow: hidden;
+            margin-bottom: 10px; }
+          .container .middlePart .PayBox .ChooseType .CreaditCardBox .Cardholder, .container .middlePart .PayBox .ChooseType .CreaditCardBox .CardNumber {
+            display: block;
+            width: 300px;
+            height: 32px;
+            border-radius: 4px;
+            outline: none;
+            box-sizing: border-box;
+            padding: 0 10px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 1px solid #d1d1d1; }
+          .container .middlePart .PayBox .ChooseType .CreaditCardBox .CardTime {
+            width: 300px;
+            height: 32px;
+            overflow: hidden;
+            font-size: 0;
+            text-align: left; }
+            .container .middlePart .PayBox .ChooseType .CreaditCardBox .CardTime .CardMY {
+              display: inline-block;
+              vertical-align: top;
+              width: 130px;
+              height: 32px;
+              box-sizing: border-box;
+              border: 1px solid #d1d1d1;
+              outline: none;
+              text-align: left;
+              font-size: 14px;
+              border-radius: 4px;
+              margin-right: 20px;
+              padding: 0 10px; }
+            .container .middlePart .PayBox .ChooseType .CreaditCardBox .CardTime .CardCvv {
+              display: inline-block;
+              vertical-align: top;
+              width: 150px;
+              height: 32px;
+              box-sizing: border-box;
+              border: 1px solid #d1d1d1;
+              outline: none;
+              padding: 0 10px;
+              font-size: 14px;
+              border-radius: 4px; }
+        .container .middlePart .PayBox .ChooseType .CreaditCardBox.choosed {
+          border: 1px solid #b72a3d; }
+          .container .middlePart .PayBox .ChooseType .CreaditCardBox.choosed .CreaditCardTitle span:nth-child(1) {
+            color: #b72a3d; }
+        .container .middlePart .PayBox .ChooseType .line {
+          width: 100%;
+          height: 1px;
+          background: #d1d1d1;
+          margin: 10px 0; }
+        .container .middlePart .PayBox .ChooseType .PayNow {
+          width: 100%;
+          height: 42px;
+          line-height: 42px;
+          border-radius: 4px;
+          background: #b72a3d;
+          text-align: center;
+          font-size: 14px;
+          color: #fff;
+          margin-bottom: 10px;
+          cursor: pointer; }
+          .container .middlePart .PayBox .ChooseType .PayNow img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px; }
+          .container .middlePart .PayBox .ChooseType .PayNow span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px; }
+    .container .middlePart .PayBox.NoUsed {
+      background-color: #f3f3f3;
+      cursor: default; }
+      .container .middlePart .PayBox.NoUsed .PayTitle .TipPic {
+        display: none; }
+      .container .middlePart .PayBox.NoUsed .PayTitle .Num {
+        background: #999;
+        color: #fff;
+        margin-right: 10px;
+        margin-left: 0; }
+      .container .middlePart .PayBox.NoUsed .PayTitle .Words {
+        color: #999; }
+      .container .middlePart .PayBox.NoUsed .PayTitle .PayEditBox {
+        display: none; }
+      .container .middlePart .PayBox.NoUsed .ChooseType {
+        display: none; }
+  .container .rightPart {
+    display: inline-block;
+    vertical-align: top;
+    width: 240px;
+    overflow: hidden;
+    display: none;
+    margin-top: 48px; */
+    margin-bottom: 50px; }
+    .container .rightPart .PriceDetail {
+      width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+      border: 1px solid #d1d1d1;
+      padding: 0 10px;
+      border-radius: 4px;
+      margin-bottom: 20px; }
+      .container .rightPart .PriceDetail h3 {
+        font-size: 14px;
+        color: #232323;
+        text-align: center;
+        margin: 20px 0 10px; }
+      .container .rightPart .PriceDetail .DetailBox {
+        width: 100%;
+        overflow: hidden;
+        font-size: 14px;
+        color: #232323; }
+        .container .rightPart .PriceDetail .DetailBox .title {
+          width: 100%;
+          overflow: hidden;
+          margin: 10px 0; }
+          .container .rightPart .PriceDetail .DetailBox .title span:nth-child(1) {
+            float: left; }
+          .container .rightPart .PriceDetail .DetailBox .title span:nth-child(2) {
+            float: right; }
+        .container .rightPart .PriceDetail .DetailBox .GoodName {
+          width: 100%;
+          overflow: hidden;
+          text-align: left;
+          height: 19px; }
+        .container .rightPart .PriceDetail .DetailBox .ItemPrice {
+          width: 100%;
+          overflow: hidden;
+          margin: 10px 0; }
+          .container .rightPart .PriceDetail .DetailBox .ItemPrice span:nth-child(1) {
+            float: left; }
+          .container .rightPart .PriceDetail .DetailBox .ItemPrice span:nth-child(2) {
+            float: right; }
+        .container .rightPart .PriceDetail .DetailBox .Quantitys {
+          width: 100%;
+          overflow: hidden; }
+          .container .rightPart .PriceDetail .DetailBox .Quantitys span:nth-child(1) {
+            float: left; }
+          .container .rightPart .PriceDetail .DetailBox .Quantitys span:nth-child(2) {
+            float: right; }
+      .container .rightPart .PriceDetail .line {
+        width: 100%;
+        height: 1px;
+        background: #d1d1d1;
+        margin: 20px auto; }
+      .container .rightPart .PriceDetail .ItemTotalBox {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 20px; }
+        .container .rightPart .PriceDetail .ItemTotalBox span:nth-child(1) {
+          float: left;
+          font-size: 14px;
+          color: #b72a3d; }
+        .container .rightPart .PriceDetail .ItemTotalBox span:nth-child(2) {
+          float: right;
+          font-size: 14px;
+          color: #b72a3d; }
+    .container .rightPart .BoxOutside {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 10px; }
+      .container .rightPart .BoxOutside span:nth-child(1) {
+        float: left;
+        font-size: 14px;
+        color: #232323; }
+      .container .rightPart .BoxOutside span:nth-child(2) {
+        float: right;
+        font-size: 14px;
+        color: #b72a3d; }
+    .container .rightPart .line {
+      width: 100%;
+      height: 1px;
+      background: #d1d1d1;
+      margin: 10px auto 20px; }
+    .container .rightPart .TotalBox {
+      width: 100%;
+      overflow: hidden;
+      line-height: 30px; }
+      .container .rightPart .TotalBox span:nth-child(1) {
+        float: left;
+        font-size: 14px;
+        color: #b72a3d; }
+      .container .rightPart .TotalBox span:nth-child(2) {
+        float: right;
+        font-size: 24px;
+        font-weight: bold;
+        color: #b72a3d; }
+  .container .resetGroup {
+    position: relative;
+    margin-bottom:12px;
+    top: 0;
+    width: 130px;
+    left: 0; }
+    .container .resetGroup .a {
+      display: block; }
+      .container .resetGroup .a .NextBtn {
+        width: 120px;
+        height: 36px;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 20px;
+        color: #232323;
+        font-weight:bold;
+        line-height:36px; }
+    .container .resetGroup .b {
+      display: none; }
+      .container .resetGroup .b .NextBtn {
+        width: 120px;
+        height: 36px;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 20px;
+        color: #232323;
+        font-weight:bold;
+        line-height:36px; }
+
+.cover {
+  width: 100%;
+  height: 100%;
+  /*background: rgba(0, 0, 0, 0.24);
+  position: absolute;
+  left: 0;
+  top: 0;*/
+  z-index: 99999; }
+  .cover .coverMain {
+    width: 324px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+    .cover .coverMain h3 {
+      font-size: 14px;
+      color: #232323; }
+    .cover .coverMain p {
+      font-size: 14px;
+      color: #232323;
+      margin: 10px 0 20px; }
+    .cover .coverMain .CoverConfirm {
+      font-size: 14px;
+      font-weight: bold;
+      color: #b72a3d;
+      /*float: right;*/
+      cursor: pointer; }

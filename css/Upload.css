@@ -1,0 +1,1552 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto !important;
+    user-drag: none;
+     -moz-user-drag: none;
+    -webkit-user-drag: none;
+     -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #F3F3F3;
+    box-sizing: border-box;
+    /*overflow: auto;*/
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+
+img[src=""] {
+    display: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border: none;
+}
+
+.mainBox {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+
+
+    /*�����ʽ*/
+
+    .mainBox .mainCover,
+    .mainBox .SpecCover {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .24);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        display: none;
+    }
+
+        .mainBox .mainCover .mainCoverContent {
+            width: 1210px;
+            height: 860px;
+            border: 1px solid red;
+            margin: 80px auto 0;
+            position: relative;
+        }
+
+            .mainBox .mainCover .mainCoverContent .tips {
+                width: 390px;
+                padding: 20px;
+                box-sizing: border-box;
+                background: #fff;
+                position: absolute;
+                /*left:676px;
+    top:45px;*/
+            }
+
+                .mainBox .mainCover .mainCoverContent .tips .Arrow {
+                    width: 42px;
+                    height: 37px;
+                    background-image: url('https://mall-res.momentcam.net/Images/mo/ChooseComic/home_tips_arrow.png');
+                    position: absolute;
+                    /*left:20px;
+        top:-37px;*/
+                }
+
+                .mainBox .mainCover .mainCoverContent .tips fieldset {
+                    display: block;
+                    width: 100%;
+                    overflow: hidden;
+                    color: #b52b3c;
+                    border: 1px solid #b52b3c;
+                    box-sizing: border-box;
+                }
+
+                    .mainBox .mainCover .mainCoverContent .tips fieldset legend {
+                        margin-left: 20px;
+                        padding: 0 5px;
+                        background: #fff;
+                    }
+
+                    .mainBox .mainCover .mainCoverContent .tips fieldset .TipText {
+                        width: 100%;
+                        box-sizing: border-box;
+                        padding: 0 20px;
+                        font-size: 22px;
+                        color: #b52b3c;
+                        margin: 20px 0 10px;
+                    }
+
+                    .mainBox .mainCover .mainCoverContent .tips fieldset .nextCheck {
+                        width: 100%;
+                        text-indent: 20px;
+                        font-size: 0;
+                        color: #232323;
+                    }
+
+                        .mainBox .mainCover .mainCoverContent .tips fieldset .nextCheck input {
+                            margin-right: 10px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 15px;
+                            height: 15px;
+                        }
+
+                        .mainBox .mainCover .mainCoverContent .tips fieldset .nextCheck label {
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-size: 14px;
+                            text-indent: 0;
+                        }
+
+                    .mainBox .mainCover .mainCoverContent .tips fieldset .SkipBox {
+                        width: 100%;
+                        overflow: hidden;
+                        font-size: 0;
+                        text-align: right;
+                        margin: 20px 0;
+                    }
+
+                        .mainBox .mainCover .mainCoverContent .tips fieldset .SkipBox .Skip {
+                            font-size: 14px;
+                            color: #999;
+                            text-decoration: underline;
+                            margin-right: 20px;
+                            display: inline-block;
+                            vertical-align: bottom;
+                            cursor: pointer;
+                        }
+
+                        .mainBox .mainCover .mainCoverContent .tips fieldset .SkipBox .nextTip {
+                            display: inline-block;
+                            vertical-align: bottom;
+                            font-size: 22px;
+                            color: #fff;
+                            width: 141px;
+                            height: 38px;
+                            text-align: center;
+                            line-height: 38px;
+                            background: #b52b3c;
+                            cursor: pointer;
+                            margin-right: 20px;
+                        }
+
+
+/*�����ʽ����*/
+
+
+/*ѡ������ʽ*/
+
+.cameraBox button.cameraBtn {
+    margin: 0 auto;
+    top: 0px;
+    position: relative;
+    background-color: white;
+    z-index: 999;
+    width: 141px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    background: #b52b3c;
+    color: white;
+    font-size: 17px;
+}
+.cameraBox .shootButton button {
+    display:block;
+    width:80px;
+    height:80px;
+    position:absolute;
+    top:20px;
+    right:380px;
+    z-index:99;
+    background: #eee url(https://mall-res.momentcam.net/Images/mo/Upload/ic_photo_camera.png) center center no-repeat;
+    background-size:46px 46px;
+    border:none;
+    outline:none;
+    border-radius:50%;
+    cursor:pointer;
+}
+.cameraBox .resetBtns button {
+    display:block;
+    width:80px;
+    height:80px;
+    position:absolute;
+    top:20px;
+    right:380px;
+    z-index:99;
+    background: #b72a3d url(https://mall-res.momentcam.net/Images/mo/Upload/ic_done_white_big.png) center center no-repeat;
+    background-size:46px 46px;
+    border:none;
+    outline:none;
+    border-radius:50%;
+    cursor:pointer;
+}
+.mainBox .SpecCover .SpecContain {
+    width: 780px;
+    height: 694px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -390px;
+    margin-top: -347px;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+    .mainBox .SpecCover .SpecContain .SpecBox {
+        width: 100%;
+        height: 100%;
+        border: 2px solid #b52b3c;
+        position: relative;
+        padding: 40px 8px;
+    }
+
+        .mainBox .SpecCover .SpecContain .SpecBox .SpecBoxLeft {
+            width: 360px;
+            float: left;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .mainBox .SpecCover .SpecContain .SpecBox .SpecBoxRight {
+            width: 360px;
+            float: left;
+            border-left: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .mainBox .SpecCover .SpecContain .SpecBox img {
+            display: block;
+            width: 320px;
+            margin: 0 auto;
+        }
+
+        .mainBox .SpecCover .SpecContain .SpecBox p {
+            text-align: center;
+            font-size: 18px;
+            color: #b52b3c;
+            margin-top: 6px;
+        }
+
+        .mainBox .SpecCover .SpecContain .SpecBox .SaveBtn {
+            width: 320px;
+            height: 44px;
+            background: #b52b3c;
+            text-align: center;
+            line-height: 44px;
+            font-size: 18px;
+            color: #fff;
+            margin: 20px auto 40px;
+        }
+
+
+/*ѡ������ʽ����*/
+
+.main {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+    .main .part {
+        height: 100%;
+        position: relative;
+        margin: 60px auto;
+        text-align: center;
+        display: block;
+        white-space: nowrap;
+    }
+
+.main .part#part0{
+        width:1037px;
+        min-width:0px;
+        overflow:hidden;
+        background:#fff;
+        box-shadow:0 0 10px rgba(0,0,0,.24);
+        -moz-box-shadow:0 0 10px rgba(0, 0, 0, .24);
+        -webkit-box-shadow:0 0 10px rgba(0,0,0,.24);
+    }
+
+#part1 {
+    width: 100%;
+    max-width:1380px;
+}
+
+/*partOne Upload*/
+
+.partOneLeft {
+    width: 464px;
+    height: 774px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 30px 80px 30px 20px;
+}
+    .partOneLeft img {
+        display: block;
+        width: 100%;
+    }
+
+.partOneLeft {
+    width: 447px;
+    height: 562px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 30px 80px 30px 20px;
+}
+
+    .partOneLeft img {
+        display: block;
+        width: 100%;
+    }
+
+.partOneRight {
+    width: 460px;
+    overflow:hidden;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    background-color: white;
+    position:relative;
+    margin:50px 20px 50px 0;
+}
+
+    .partOneRight h3 {
+        font-size: 22px;
+        color: #b72a3d;
+        line-height: 29px;
+        margin-bottom: 20px;
+    }
+
+        .partOneRight h3 .switch {
+            cursor: pointer;
+            float: right;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+    .partOneRight .PicShow {
+        width: 460px;
+        height: 432px;
+        box-sizing: border-box;
+        border: 1px dashed #d1d1d1;
+        /*padding: 9px;
+        -webkit-box-shadow: 0 0 2px rgba(0,0,0,.12);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0,.12);
+        box-shadow: 0 0 2px rgba(0,0,0,.12);
+        margin: 30px auto 0;*/
+        position:relative;
+    }
+        .partOneRight .PicShow .CameraTips{
+            width: 460px;
+            height: 432px;
+            /*padding:20px;*/
+            text-align:center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            background:#fff;
+            z-index:9999;
+            box-sizing: border-box;
+            background: #f3f3f3;
+            border: 1px dashed #d1d1d1;
+            display:none;
+        }
+            .partOneRight .PicShow .CameraTips .TipWords {
+                width:100%;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                font-size: 18px;
+                color: #232323;
+            }
+        .partOneRight .PicShow .showBox {
+            width: 460px;
+            height: 432px;
+            box-sizing: border-box;
+            background: #f3f3f3;
+            border: 1px dashed #d1d1d1;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+        }
+
+            .partOneRight .PicShow .showBox .tip {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 160px;
+            }
+
+                .partOneRight .PicShow .showBox .tip img {
+                    display: block;
+                    width: 60px;
+                    margin: 0 auto 12px;
+                }
+
+                .partOneRight .PicShow .showBox .tip p {
+                    text-align: center;
+                    font-size: 18px;
+                    color: #232323;
+                }
+
+    .partOneRight .line {
+        width: 100%;
+        overflow: hidden;
+        font-size: 0;
+        text-align: center;
+        margin: 20px 0 20px;
+        display:none;
+    }
+
+        .partOneRight .line span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 202px;
+            height: 2px;
+            background: #dfdfdf;
+        }
+
+            .partOneRight .line span:nth-child(2) {
+                width: auto;
+                height: auto;
+                font-size: 20px;
+                color: #232323;
+                margin: 0 10px;
+                background: #fff;
+            }
+
+    .partOneRight .takeType {
+        width: 100%;
+        overflow: hidden;
+        font-size: 0;
+        text-align: center;
+        margin-top:50px;
+    }
+
+        .partOneRight .takeType dl {
+            display: inline-block;
+            vertical-align: middle;
+            width: 166px;
+            padding: 0 20px;
+        }
+
+            .partOneRight .takeType dl dt {
+                /*width: 110px;*/
+            }
+
+                .partOneRight .takeType dl dt img {
+                    display: block;
+                    width: 100%;
+                }
+
+            .partOneRight .takeType dl dd {
+                width: 100%;
+                text-align: center;
+                font-size: 14px;
+                color: #232323;
+                margin: 5px 0 6px;
+            }
+
+        .partOneRight .takeType .uloadPhoto {
+            cursor: pointer;
+        }
+
+        .partOneRight .takeType .cameraShoot {
+            cursor: pointer;
+        }
+
+
+/*partTwo Beauty*/
+
+.Recreat {
+    width: 444px;
+    height: 44px;
+    position: absolute;
+    right: 69px;
+    bottom: 179px;
+    z-index: 99;
+    background: rgba(0, 0, 0, .24);
+}
+
+    .Recreat .ReFemale {
+        float: left;
+        width: 221px;
+        height: 44px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 0;
+    }
+
+    .Recreat .REline {
+        float: left;
+        width: 2px;
+        height: 34px;
+        margin-top: 5px;
+        background: #fff;
+    }
+
+    .Recreat .ReMale {
+        float: left;
+        width: 221px;
+        height: 44px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 0;
+    }
+
+        .Recreat .ReMale img,
+        .Recreat .ReFemale img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .Recreat .ReMale span,
+        .Recreat .ReFemale span {
+            display: inline-block;
+            vertical-align: middle;
+            height: 44px;
+            line-height: 44px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+
+
+.modelsLoad {
+    width: 470px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+    .modelsLoad .model {
+        width: 88px;
+        height: 88px;
+        float: left;
+        margin: 3px;
+        cursor: pointer;
+        box-sizing: border-box;
+        position: relative;
+        animation: myfirst ease-in-out 1.5s infinite;
+        animation-fill-mode: both;
+    }
+
+        .modelsLoad .model img {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+@keyframes myfirst {
+    0% {
+        background: #f0f0f0;
+    }
+
+    50% {
+        background: #e0e0e0;
+    }
+
+    100% {
+        background: #f0f0f0;
+    }
+}
+
+.BeautyLeft .modelsBox .modelsList {
+    width: 464px;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    /*margin-left:-3px;
+    padding-left: 2px;*/
+}
+
+    .BeautyLeft .modelsBox .modelsList .model {
+        width: 88px;
+        height: 88px;
+        background: url(../img/Beauty/bg_material_shadow.png) no-repeat center;
+        background-size: 100% 100%;
+        float: left;
+        margin: 3px;
+        cursor: pointer;
+        box-sizing: border-box;
+        position: relative;
+        /*border: 3px solid #fff;*/
+    }
+
+        .BeautyLeft .modelsBox .modelsList .model:nth-child(5n) {
+            margin: 3px 3px 3px 0;
+        }
+
+        .BeautyLeft .modelsBox .modelsList .model:nth-child(5n+4) {
+            margin: 3px 0 3px 3px;
+        }
+
+        .BeautyLeft .modelsBox .modelsList .model img {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            left: 9px;
+            top: 9px;
+        }
+
+        .BeautyLeft .modelsBox .modelsList .model.active {
+            border: 3px solid #b72a3d;
+            background: #fff;
+        }
+
+            .BeautyLeft .modelsBox .modelsList .model.active img {
+                left: 6px;
+                top: 6px;
+            }
+
+.BeautyLeft .ChangeFair,
+.ChangeComic {
+    width: 100%;
+    overflow: hidden;
+}
+
+    .BeautyLeft .ChangeFair .ChangeFairUp,
+    .ChangeComic .ChangeComicUp {
+        float: left;
+        width: 226px;
+        height: 48px;
+        cursor: pointer;
+        box-sizing: border-box;
+        background: url(../img/Beauty/icon_up.png) no-repeat center;
+        border: 1px solid #b52b3c;
+        margin-right: 12px;
+        transition: border .5s;
+        -moz-transition: border .5s;
+        -webkit-transition: border .5s;
+        -o-transition: border .5s;
+    }
+
+        .BeautyLeft .ChangeFair .ChangeFairUp:hover,
+        .ChangeComic .ChangeComicUp:hover {
+            border: 1px solid #971b2b;
+        }
+
+        .BeautyLeft .ChangeFair .ChangeFairUp.enable,
+        .ChangeComic .ChangeComicUp.enable {
+            opacity: 0.5;
+        }
+
+            .BeautyLeft .ChangeFair .ChangeFairUp.enable:hover,
+            .ChangeComic .ChangeComicUp.enable:hover {
+                border: 1px solid #b52b3c;
+            }
+
+    .BeautyLeft .ChangeFair .ChangeFairDown,
+    .ChangeComic .ChangeComicDown {
+        float: left;
+        width: 226px;
+        height: 48px;
+        cursor: pointer;
+        box-sizing: border-box;
+        background: url(../img/Beauty/icon_down.png) no-repeat center;
+        border: 1px solid #b52b3c;
+    }
+
+        .BeautyLeft .ChangeFair .ChangeFairDown:hover,
+        .ChangeComic .ChangeComicDown:hover {
+            border: 1px solid #971b2b;
+        }
+
+        .BeautyLeft .ChangeFair .ChangeFairDown.enable,
+        .ChangeComic .ChangeComicDown.enable {
+            opacity: 0.5;
+        }
+
+            .BeautyLeft .ChangeFair .ChangeFairDown.enable:hover,
+            .ChangeComic .ChangeComicDown.enable:hover {
+                border: 1px solid #b52b3c;
+            }
+
+.BeautyRight .SelectSex {
+    width: 340px;
+    height: 44px;
+    border-radius: 4px;
+    border: 2px solid #b72a3d;
+    font-size: 0;
+    text-align: center;
+    margin: 45px auto 15px;
+    position: relative;
+}
+
+    .BeautyRight .SelectSex span {
+        width: 50%;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 22px;
+        color: #b72a3d;
+        cursor: pointer;
+        background: #fff;
+    }
+
+        .BeautyRight .SelectSex span.active {
+            background: #B72A3D;
+            color: #fff;
+        }
+
+
+[name=renderResult]{
+        height:675px;
+    }
+.NoBorder {
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.BeautyRight .fairPicShow,
+.ComicShow .ComicPicShow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+    .BeautyRight .fairPicShow .loading,
+    .ComicShow .ComicPicShow .loading {
+        width: 46% !important;
+        left: 50%;
+        margin-left: -23% !important;
+        top: 28%;
+        position: absolute;
+    pointer-events: none;
+    }
+
+
+
+.swiper-container-assets {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*ѡ������ʽ*/
+
+.ChooseComicLeft {
+    float: left;
+    width: 464px;
+    margin: 43px 152px 0 70px;
+    position: relative;
+}
+
+    .ChooseComicLeft .maobianBottom,
+    .maobianTop {
+        width: 100%;
+        height: 40px;
+        background: url('../img/ChooseComic/cover_gradient.png') repeat-x;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+    }
+
+.maobianTop {
+    left: 0;
+    top: 140px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    display: none;
+}
+
+.ChooseComicLeft .Search {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #dfdfdf;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+}
+
+    .ChooseComicLeft .Search .title {
+        font-size: 14px;
+        color: #232323;
+        padding: 0 5px;
+        background: #fff;
+        position: absolute;
+        left: 20px;
+        top: -11px;
+    }
+
+    .ChooseComicLeft .Search input {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border: none;
+        outline: none;
+        text-indent: 20px;
+    }
+
+    .ChooseComicLeft .Search .SearchBtn {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 6px;
+        top: 5px;
+        cursor: pointer;
+        background-image: url('../img/ChooseComic/cartoons_icon_search.png');
+    }
+
+        .ChooseComicLeft .Search .SearchBtn:hover {
+            background-image: url('../img/ChooseComic/cartoons_icon_search_click.png');
+        }
+
+.ChooseComicLeft .theme {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #dfdfdf;
+    margin-bottom: 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ChooseComicLeft .themeLeft {
+    float: left;
+    width: 19%;
+    height: 80px;
+    /*background: url('../img/Beauty/bg_material_shadow.png') no-repeat center;
+        background-size: cover;*/
+    cursor: pointer;
+    -moz-box-shadow: 2px 0 2px #e0e0e0;
+    -webkit-box-shadow: 2px 0 2px #e0e0e0;
+    box-shadow: 2px 0 2px #e0e0e0;
+}
+
+    .ChooseComicLeft .themeLeft img {
+        display: block;
+        width: 40px;
+        margin: 8px auto 4px;
+        cursor: pointer;
+    }
+
+    .ChooseComicLeft .themeLeft p {
+        font-size: 14px;
+        color: #232323;
+        text-align: center;
+    }
+
+.ChooseComicLeft .themeRight {
+    float: left;
+    width: 80%;
+    height: 78px;
+    margin-left: 2px;
+}
+
+    .ChooseComicLeft .themeRight .swiper-slide {
+        cursor: pointer;
+    }
+
+    .ChooseComicLeft .themeRight img {
+        display: block;
+        width: 40px;
+        margin: 8px auto 4px;
+    }
+
+    .ChooseComicLeft .themeRight p {
+        font-size: 14px;
+        color: #232323;
+        text-align: center;
+    }
+
+.active {
+    cursor: default;
+}
+
+.ChooseComicLeft .ComicList {
+    width: 464px;
+    height: 640px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+    .ChooseComicLeft .ComicList .ComicListBox {
+        width: 100%;
+        overflow: hidden;
+        font-size: 0;
+        text-align: left;
+        box-sizing: border-box;
+        padding-left: 2px;
+    }
+
+    .ChooseComicLeft .ComicList::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ChooseComicLeft .ComicList .ComicModel {
+        width: 149px;
+        height: 209px;
+        margin-right: 7px;
+        margin-bottom: 8px;
+        box-sizing: border-box;
+        border: 5px solid #fff;
+        display: inline-block;
+        vertical-align: top;
+        -webkit-box-shadow: 0 0 5px #ccc;
+        -moz-box-shadow: 0 0 5px #ccc;
+        box-shadow: 0 0 5px #ccc;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+        .ChooseComicLeft .ComicList .ComicModel.active {
+            border: 5px solid #b52b3c;
+        }
+
+        .ChooseComicLeft .ComicList .ComicModel:nth-child(3n+3) {
+            margin-right: 0;
+        }
+
+.ChooseComicRight {
+    float: left;
+    width: 464px;
+    margin-top: 43px;
+    position: relative;
+}
+
+    .ChooseComicRight .MakeUp {
+        width: 138px;
+        height: 62px;
+        position: absolute;
+        right: -29px;
+        top: 66px;
+        z-index: 99;
+        cursor: pointer;
+        background-image: url('../img/ChooseComic/cartoons_button_makeup.png');
+    }
+
+        .ChooseComicRight .MakeUp:hover {
+            background-image: url('../img/ChooseComic/cartoons_button_makeup_click.png');
+        }
+
+    .ChooseComicRight .ComicBtns {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 12px;
+    }
+
+        .ChooseComicRight .ComicBtns .Save {
+            float: left;
+            width: 226px;
+            height: 48px;
+            text-align: center;
+            line-height: 46px;
+            box-sizing: border-box;
+            border: 1px solid #b52b3c;
+            margin-right: 12px;
+            font-size: 18px;
+            color: #b53b2c;
+            cursor: pointer;
+        }
+
+            .ChooseComicRight .ComicBtns .Save:hover {
+                border: 1px solid #971b2b;
+                color: #971b2b;
+            }
+
+        .ChooseComicRight .ComicBtns .ShareFb {
+            float: left;
+            width: 226px;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            box-sizing: border-box;
+            font-size: 18px;
+            color: #fff;
+            background: #3b589c url('../img/ChooseComic/cartoons_share_icon_facebook.png') no-repeat 10px center;
+            text-indent: 45px;
+            cursor: pointer;
+        }
+
+            .ChooseComicRight .ComicBtns .ShareFb:hover {
+                background: #243b7d url('../img/ChooseComic/cartoons_share_icon_facebook.png') no-repeat 10px center;
+            }
+
+        .ChooseComicRight .ComicBtns .Buy {
+            float: left;
+            width: 100%;
+            height: 48px;
+            text-align: center;
+            line-height: 48px;
+            box-sizing: border-box;
+            font-size: 0;
+            background: #b52b3c;
+            cursor: default;
+            text-align: center;
+            margin-top: 12px;
+            transition: background .5s;
+            -moz-transition: background .5s;
+            -webkit-transition: background .5s;
+            -o-transition: background .5s;
+            cursor: pointer;
+        }
+
+            .ChooseComicRight .ComicBtns .Buy:hover {
+                background: #971b2b;
+            }
+
+            .ChooseComicRight .ComicBtns .Buy span:nth-child(1) {
+                font-size: 22px;
+                height: 26px;
+                line-height: 26px;
+                color: #fff;
+                display: inline-block;
+                vertical-align: middle;
+                padding-right: 20px;
+                margin-right: 20px;
+                border-right: 1px solid #fff;
+            }
+
+            .ChooseComicRight .ComicBtns .Buy span:nth-child(2) {
+                font-size: 22px;
+                height: 26px;
+                line-height: 26px;
+                color: #fff;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+.fairBox {
+    width: 120px;
+    height: 682px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    right: -90px;
+    top: 8px;
+    z-index: 99;
+    padding: 36px 10px 10px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+    .fairBox .fairColorBox {
+        width: 100px;
+        height: 100%;
+        position: relative;
+        border: 1px solid #dfdfdf;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .fairBox .title {
+        font-size: 14px;
+        color: #232323;
+        padding: 0 5px;
+        background: #fff;
+        position: absolute;
+        left: 31px;
+        top: 26px;
+        z-index: 9;
+    }
+
+    .fairBox .fairColorBox .fairColorList {
+        width: 80px;
+        /*height: 528px;
+            overflow-x: hidden;
+            overflow-y: scroll;*/
+        margin: 16px auto 0;
+    }
+
+        .fairBox .fairColorBox .fairColorList::-webkit-scrollbar {
+            display: none;
+        }
+
+        .fairBox .fairColorBox .fairColorList img {
+            display: block;
+            width: 80px;
+            margin-bottom: 16px;
+            cursor: pointer;
+        }
+
+
+/*ѡ����Ʒ������ʽ*/
+
+.chooseSpecCover {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .24);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+.chooseSpec {
+        -webkit-box-shadow: -1px 0px 2px 0px rgba(50, 50, 50, 0.7);
+-moz-box-shadow:    -1px 0px 2px 0px rgba(50, 50, 50, 0.7);
+box-shadow:         -1px 0px 2px 0px rgba(50, 50, 50, 0.7);
+    width: 552px;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: -552px;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+    .chooseSpec .specList {
+        width: 100%;
+        overflow: hidden;
+    }
+
+        .chooseSpec .specList .spec {
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+            .chooseSpec .specList .spec h3 {
+                width: 100%;
+                height: 60px;
+                box-sizing: border-box;
+                line-height: 58px;
+                border-top: 1px solid #e0e0e0;
+                border-bottom: 1px solid #e0e0e0;
+                font-size: 22px;
+                color: #232323;
+            }
+
+            .chooseSpec .specList .spec .specModels {
+                width: 100%;
+                padding-top: 20px;
+                overflow: hidden;
+            }
+
+                .chooseSpec .specList .spec .specModels a {
+                    float: left;
+                    padding: 0 20px;
+                    height: 44px;
+                    text-align: center;
+                    line-height: 43px;
+                    border: 1px solid #e0e0e0;
+                    margin-right: 15px;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                    color: #232323;
+                }
+
+                    .chooseSpec .specList .spec .specModels a.active {
+                        border: 2px solid #b52b3c;
+                        color: #b52b3c;
+                    }
+
+    .chooseSpec .BuyCount {
+        width: 100%;
+        height: 60px;
+        box-sizing: border-box;
+        line-height: 58px;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 22px;
+        color: #232323;
+        position: relative;
+    }
+
+        .chooseSpec .BuyCount .CountSure {
+            height: 60px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: right;
+            font-size: 0;
+        }
+
+            .chooseSpec .BuyCount .CountSure span {
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 26px;
+                color: #ccc;
+                background: #f5f5f5;
+                cursor: pointer;
+            }
+
+                .chooseSpec .BuyCount .CountSure span.reduce {
+                    background: #fbfbfb;
+                }
+
+                .chooseSpec .BuyCount .CountSure span.CountNum {
+                    width: 40px;
+                    font-size: 22px;
+                    color: #232323;
+                    margin: 0 2px;
+                    cursor: auto;
+                }
+
+    .chooseSpec .UnitPrice,
+    .chooseSpec .TotlePrice {
+        width: 100%;
+        font-size: 0;
+        text-align: right;
+        margin-top: 20px;
+    }
+
+        .chooseSpec .UnitPrice span,
+        .chooseSpec .TotlePrice span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            color: #232323;
+            cursor: pointer;
+        }
+
+            .chooseSpec .UnitPrice span:nth-child(2) {
+                width: 142px;
+                text-align: right;
+                font-size: 18px;
+                color: #b72a3a;
+                cursor: auto;
+            }
+
+            .chooseSpec .TotlePrice span:nth-child(2) {
+                width: 142px;
+                text-align: right;
+                font-size: 28px;
+                color: #b72a3a;
+            }
+
+    .chooseSpec .Confirm {
+        width: 502px;
+        height: 54px;
+        background: #5f646e;
+        text-align: center;
+        line-height: 54px;
+        font-size: 22px;
+        color: #f5f5f5;
+        margin-top: 30px;
+        cursor: pointer;
+        transition: background .5s;
+        -moz-transition: background .5s;
+        -webkit-transition: background .5s;
+        -o-transition: background .5s;
+    }
+
+        .chooseSpec .Confirm.active {
+            background: #b72a3a;
+        }
+
+            .chooseSpec .Confirm.active:hover {
+                background: #971b2b;
+            }
+
+
+/*ѡ����Ʒ������ʽ����*/
+
+
+/*����ҳ�滬��*/
+
+.moveRight {
+    animation: moveRight 2.3s linear;
+    -webkit-animation: moveRight 2.3s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes moveRight {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(100%, 0);
+    }
+}
+
+@-webkit-keyframes moveRight {
+    from {
+        -webkit-transform: translate(0, 0);
+    }
+
+    to {
+        -webkit-transform: translate(100%, 0);
+    }
+}
+
+.moveLeft {
+    animation: moveLeft .3s linear;
+    -webkit-animation: moveLeft .3s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-100%, 0);
+    }
+}
+
+@-webkit-keyframes moveLeft {
+    from {
+        -webkit-transform: translate(0, 0);
+    }
+
+    to {
+        -webkit-transform: translate(-100%, 0);
+    }
+}
+
+.autocomplete-suggestions {
+    border: 1px solid #999;
+    background: #FFF;
+    overflow: auto;
+}
+
+.autocomplete-suggestion {
+    padding: 2px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align:left;
+}
+
+.autocomplete-selected {
+    background: #F0F0F0;
+}
+
+.autocomplete-suggestions strong {
+    font-weight: normal;
+    color: #3399FF;
+}
+
+.autocomplete-group {
+    padding: 2px 5px;
+}
+
+    .autocomplete-group strong {
+        display: block;
+        border-bottom: 1px solid #000;
+    }
+
+.cover {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .45);
+    z-index: 99999;
+    display: none;
+}
+
+    .cover .ReleaseFaile {
+        width: 340px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #d8d8d8;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        margin-left: -170px;
+        overflow: hidden;
+    }
+
+        .cover .ReleaseFaile p {
+            text-align: center;
+            font-size: 14px;
+            color: #363636;
+            line-height: 20px;
+            margin: 50px 0 30px;
+            padding: 0 20px;
+            box-sizing:border-box;
+        }
+
+        .cover .ReleaseFaile .FaileSure,
+        .iKnow {
+            width: 120px;
+            height: 42px;
+            border-radius: 4px;
+            line-height: 42px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            margin: 0 auto 25px;
+            background: #b52b3c;
+            cursor: pointer;
+            transition: background .5s;
+            -moz-transition: background .5s;
+            -webkit-transition: background .5s;
+            -o-transition: background .5s;
+        }
+
+            .cover .ReleaseFaile .FaileSure:hover,
+            .iKnow:hover {
+                background: #971b2b;
+            }
+
+
+
+.confirm {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .45);
+    z-index: 9999;
+    display: none;
+    text-align: center;
+}
+
+    .confirm .ReleaseFaile {
+        width: 340px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #d8d8d8;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        margin-left: -170px;
+        overflow: hidden;
+    }
+
+        .confirm .ReleaseFaile p {
+            text-align: center;
+            font-size: 18px;
+            color: #363636;
+            line-height: 20px;
+            margin: 50px 10px 30px;
+        }
+
+        .confirm .ReleaseFaile .FaileSure,
+        .iKnow {
+            display: inline-block;
+            vertical-align: middle;
+            width: 120px;
+            height: 42px;
+            border-radius: 4px;
+            line-height: 42px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            margin: 0 auto 25px;
+            background: #b52b3c;
+            cursor: pointer;
+            transition: background .5s;
+            -moz-transition: background .5s;
+            -webkit-transition: background .5s;
+            -o-transition: background .5s;
+        }
+
+            .confirm .ReleaseFaile .FaileSure:hover,
+            .iKnow:hover {
+                background: #971b2b;
+            }
+
+        .confirm .ReleaseFaile .sSure,
+        .iKnow {
+            display: inline-block;
+            vertical-align: middle;
+            width: 120px;
+            height: 42px;
+            border-radius: 4px;
+            line-height: 42px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            margin: 0 auto 25px;
+            background: #b52b3c;
+            cursor: pointer;
+            transition: background .5s;
+            -moz-transition: background .5s;
+            -webkit-transition: background .5s;
+            -o-transition: background .5s;
+        }
+
+            .confirm .ReleaseFaile .sSure:hover,
+            .iKnow:hover {
+                background: #971b2b;
+            }
+
+    .confirm .coverClose {
+        width: 26px;
+        height: 26px;
+        background: url('https://chuangqu.momentcam.net/img/CreateCartoon/icon_close_click.png') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+.selected {
+    color: #fff !important;
+    background: #b52b3c !important;
+    border: 1px solid #b52b3c !important;
+}
+
+.disabled {
+    background: #eee !important;
+    color: #ccc;
+}

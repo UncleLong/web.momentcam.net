@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MomentCam</title>
+    <link rel="icon" type="image/x-icon" href="https://mall-res.momentcam.net/Images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://mall-res.momentcam.net/Images/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/index.css?v=3" rel="stylesheet" />
+    <meta property="og:url" content="https://web.momentcam.net" />
+    <meta property="fb:app_id" content="301308333372497" />
+    <meta property="og:title" content="MomentCam" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Personalized caricatures and products" />
+    <meta property="og:image" content="https://mall-res.momentcam.net/Images/html/web/FBBanner.jpg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/material/material-components-web.css.js"></script>
+    <script src="js/material/style.css.js"></script>
+    <style>
+        /* Ensure layout covers the entire screen. */
+        html {
+            height: 100%;
+        }
+
+        /* Place drawer and content side by side. */
+        .demo-body {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Stack toolbar and main on top of each other. */
+        .demo-content {
+            display: inline-flex;
+            flex-direction: column;
+            flex-grow: 1;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .demo-main {
+            padding-left: 16px;
+            position:relative;
+            z-index:99;
+        }
+        .mdc-toolbar{
+            display:block;
+        }
+        .mdc-persistent-drawer .mdc-list-item {
+            height:60px;
+            display: block;
+            line-height: 60px;
+            border-bottom:1px solid #ccc;
+            font-size: 14px;
+            color: rgba(0,0,0,.87);
+        }
+        .mdc-persistent-drawer .mdc-list-item.active{
+            font-weight:bold;
+            background:rgba(0,0,0,.2);
+        }
+        .mdc-persistent-drawer .mdc-list-item a{
+            text-decoration:none;
+        }
+        .mdc-persistent-drawer .mdc-list-item img{
+            display:inline-block;
+            vertical-align:middle;
+            width:20px;
+            height:20px;
+            margin-right:24px;
+        }
+        .mdc-persistent-drawer__toolbar-spacer{
+            height:60px;
+        }
+    </style>
+</head>
+<body class="demo-body mdc-typography">
+    <aside class="mdc-persistent-drawer" style="background:#fff;display:none;">
+        <nav class="mdc-persistent-drawer__drawer">
+            <div class="mdc-persistent-drawer__toolbar-spacer"></div>
+            <div class="mdc-list-group">
+                <nav class="mdc-list">
+                    <a class="mdc-list-item mdc-persistent-drawer--selected active" href="javascript:void(0);" url="Pages/home.html?V=7">
+                        <img src="https://mall-res.momentcam.net/Images/mo/index/icon_momentcam.png" />
+                        MomentCam
+                    </a>
+                    <a class="mdc-list-item" href="javascript:void(0);" name="aimee" url="https://aimee.momentcam.net">
+                        <img src="https://mall-res.momentcam.net/Images/mo/index/icon_aimee.png" />
+                        Aimee Keyboard
+                    </a>
+                    <a class="mdc-list-item" href="javascript:void(0);" name="picturewall" url="https://www.momentcam.net/Facebook/PictureWall/PictureWall.aspx">
+                        <img src="https://mall-res.momentcam.net/Images/mo/index/home_icon_facebook.png" />
+                        Momie World
+                    </a>
+                    <a class="mdc-list-item" href="javascript:void(0);" name="business" url="https://business.momentcam.net">
+                        <img src="https://mall-res.momentcam.net/Images/mo/index/icon_shop.png" />
+                        MomentCam Business
+                    </a>
+                </nav>
+            </div>
+        </nav>
+    </aside>
+    <div class="demo-content">
+        <header class="mdc-toolbar mdc-elevation--z4" style="background:#fff;z-index: 99998;">
+            <div class="navIcon demo-menu material-icons mdc-toolbar__icon--menu">
+                <i class="material-icons">menu</i>
+            </div>
+            <div class="logo">
+                <img src="https://mall-res.momentcam.net/Images/home_logo_s.png" />
+            </div>
+            <div class="LoginRe">
+                <div class="NoLogin" style="display:none;">
+                    <span>Bejelentkezés</span>
+                    <span>Regisztráció</span>
+                </div>
+                <div class="HasLogin" style="display:none;">
+                    <img src="" />
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <main class="demo-main">
+            <section class="main">
+                <iframe id="iframeM" style="display:none;padding-left:0px;height:100%;border:none;" src="" frameborder="0" scrolling="yes"></iframe>
+            </section>
+        </main>
+        <div class="LoginBox">
+            <div class="LoginNav">
+                <div class="Login active">Bejelentkezés</div>
+                <div class="Register">Regisztráció</div>
+            </div>
+            <div class="User">
+                <p>E-mail</p>
+                <input type="text" id="username" placeholder="E-mail" />
+            </div>
+            <div class="Pwd">
+                <p>Jelszó</p>
+                <input type="password" id="pwd" placeholder="Jelszó" />
+            </div>
+            <div class="PwdSure" style="display:none;">
+                <p>Jelszó megerősítése</p>
+                <input type="password" id="rpwd" placeholder="Jelszó megerősítése" />
+                <!--<div class="ClearBtn"></div>-->
+            </div>
+            <span style="position:relative;color:#de0a0a;margin-top:4px;font-size:15px;display: block;width: 100%;white-space: normal;" id="err"></span>
+            <div class="Submit B mdc-button mdc-button--raised">Bejelentkezés</div>
+            <div class="IsRegister B">
+                <div class="IsRegisterLine">
+                    <span class="IsLine"></span>
+                    <span class="IsTip">Folytatás mint</span>
+                    <span class="IsLine"></span>
+                </div>
+                <div class="CreatBtn mdc-button mdc-button--raised">Vendég</div>
+            </div>
+        </div>
+        <div class="UserInfo">
+            <div class="headIcon">
+                <img src="https://mall-res.momentcam.net/Images/mo/index/icon_aimee.png" />
+                <p></p>
+            </div>
+            <div class="UserContent">
+                <div class="Following">
+                    <p>0</p>
+                    <p>Tovább</p>
+                </div>
+                <div class="Follower">
+                    <p>0</p>
+                    <p>Továbbiak</p>
+                </div>
+                <div class="MmB">
+                    <p>0</p>
+                    <p>MmB</p>
+                </div>
+                <div class="Credits">
+                    <p>0</p>
+                    <p>Készítők</p>
+                </div>
+            </div>
+            <div class="Layout mdc-button mdc-button--raised">Kijelentkezés</div>
+            <div class="GoLoadPic" id="GoLoadPic" style="display:none;">Purchased HD Caricatures</div>
+        </div>
+    </div>
+       
+    <script src="https://mall-res.momentcam.net/lib/jquery.min.js"></script>
+    <script src="https://mall-res.momentcam.net/lib/Cookie.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/user.js"></script>
+    
+    <script src="js/material/material-components-web.js"></script>
+    <script>
+        var drawerEl = document.querySelector('.mdc-persistent-drawer');
+        var MDCPersistentDrawer = mdc.drawer.MDCPersistentDrawer;
+        var drawer = new MDCPersistentDrawer(drawerEl);
+        document.querySelector('.demo-menu').addEventListener('click', function() {
+          drawer.open = !drawer.open;
+        });
+        drawerEl.addEventListener('MDCPersistentDrawer:open', function() {
+          console.log('Received MDCPersistentDrawer:open');
+        });
+        drawerEl.addEventListener('MDCPersistentDrawer:close', function() {
+          console.log('Received MDCPersistentDrawer:close');
+        });
+        function hiding() {
+            if ($(".LoginBox").hasClass("Drawer")) {
+                $(".LoginBox").removeClass("Drawer");
+            }
+            if ($(".UserInfo").hasClass("Drawer")) {
+                $(".UserInfo").removeClass("Drawer");
+            }
+            if ($(".mdc-persistent-drawer").hasClass("mdc-persistent-drawer--open")) {
+                drawer.open = !drawer.open;
+                return false;
+            }
+        }
+    </script>
+    <script>
+        (function () {
+            var size = 1;
+            //if (/Mobi/.test(navigator.userAgent)) {
+            //    window.location.href = "https://www.momentcam.net/h5";
+            //}
+            var Lwidth = ($(".IsRegister").width() - $(".IsTip").width() - 18)/2;
+            $(".IsLine").width(Lwidth);
+            $(".mdc-list a").on("click", function () {
+                var src = $(this).attr("url");
+                var name = $(this).attr("name");
+                $(this).addClass("active").siblings().removeClass("active");
+                if (name) {
+                    window.history.pushState(null, null, "Index.html?name=" + name);
+                } else {
+                    window.history.pushState(null, null, "Index.html");
+                }
+                $("#iframeM").attr("src", src);
+                $("#iframeMs").attr("src", "").hide();
+                $("#iframePic").attr("src", "").hide();
+
+            });
+            setTimeout(function () {
+                $(".mdc-persistent-drawer").show();
+            }, 500);
+            $(".demo-main").height($(window).height()-60);
+
+            $(".navIcon").on("click", function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                $(".navBox").addClass("opened");
+                $(".UserInfo,.LoginBox").removeClass("Drawer");
+            });
+            $(".Layout").on("click", function () {
+                Cookies.remove("user");
+                window.location.href=window.location.href.split("?")[0];
+            });
+            function CheckUrl() {
+                var name = getQueryString("name");
+                var frame = $("#iframeM");
+                if (name == "aimee") {
+                    $(".nav li").eq(1).addClass("active").siblings().removeClass("active");
+                    frame.attr("src", "https://aimee.momentcam.net");
+                }
+                else if (name == "business") {
+                    $(".nav li").eq(3).addClass("active").siblings().removeClass("active");
+                    frame.attr("src", "https://business.momentcam.net");
+                } else if (name == "picturewall") {
+                    $(".nav li").eq(2).addClass("active").siblings().removeClass("active");
+                    frame.attr("src", "https://www.momentcam.net/Facebook/PictureWall/PictureWall.aspx");
+                } else if (name == "getHD") {
+                    frame.attr("src", "Pages/LoadPic.html?v=" + Math.random());
+                } else if (name == "order") {
+                    frame.attr("src", "Pages/order.html?v=" + Math.random());
+                } else if (name == "chooseItem") {
+                    frame.attr("src", "Pages/selectItem.html?v=" + Math.random());
+                } else if (name == "beauty") {
+                    frame.attr("src", "Pages/beauty.html?v=" + Math.random());
+                } else if (name == "upload") {
+                    frame.attr("src", "Pages/upload.html?v="+Math.random());
+                } else if (name == "checkOrder") {
+                    frame.attr("src", "Pages/Success.html?v=" + Math.random());
+                }
+                else {
+                    frame.attr("src", "Pages/home.html?v="+Math.random());
+                }
+                frame.show();
+            }
+            CheckUrl();
+            function getQueryString(key) {
+                var url = window.location.search;
+                var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+                var result = url.substr(1).match(reg);
+                return result ? decodeURIComponent(result[2]) : null;
+            }
+        })()
+        window.addEventListener("popstate", function (e) {
+            window.location.href = location.href;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MomentCam</title>
+    <link rel="stylesheet" type="text/css" href="../css/Upload.css?v=d332" />
+    <link href="../css/orderPart.css?v=2122" rel="stylesheet" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/beauty.css" rel="stylesheet" />
+    
+    <style type="text/css">
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css);
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        * {
+            font-family: Roboto, sans-serif;
+        }
+
+        .demo-body {
+            padding: 24px;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .demo-content > button {
+            margin-bottom: 6px;
+        }
+
+        .mdc-theme--dark {
+            background-color: #303030;
+        }
+
+        section.demo-content {
+            padding: 24px;
+        }
+
+        .catalog-dialog-demo {
+            position: relative;
+            width: 320px;
+        }
+
+        .dialog-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mdc-theme--dark, .section-dark-theme {
+            background: #262626;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainBox">
+        <div class="mainCover">
+            <div class="mainCoverContent">
+                <div class="tips">
+                    <div class="Arrow"></div>
+                    <fieldset>
+                        <legend>Tips</legend>
+                        <p class="TipText">Change the photo here.</p>
+                        <div class="nextCheck">
+                            <input id="checkBox" type="checkbox" />
+                            <label for="checkBox">Don't show up next time</label>
+                        </div>
+                        <div class="SkipBox">
+                            <span class="Skip">Skip the torial</span>
+                            <span class="nextTip">Next</span>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+      
+        
+        <div class="main">
+            
+            <div id="part0" class="part Upload" style="display:block;">
+                <div class="partOneLeft">
+                    <img src="https://mall-res.momentcam.net/Images/mo/Upload/upload_introduction2_pu.jpg" />
+                </div>
+                <div class="partOneRight">
+                    <h3><label id="gSelected"></label><span class="switch"></span></h3>
+                    <div class="PicShow">
+                        <div class="CameraTips">
+                            <div class="TipWords">
+                                <img style="display:block;width:60px;margin:0 auto 12px;" src="https://mall-res.momentcam.net/Images/mo/v2/beauty/icon_webcam.png" />
+                                <p>A webkamera nem található.</p>
+                                <p style="white-space:normal;padding:0 50px;box-sizing:border-box;">Ha rendelkezel webkamerával, kérlek engedélyezd a hozzáférést a böngésződben.</p>
+                            </div>
+                        </div>
+                        <div class="showBox" style="cursor:pointer;">
+                            <div class="tip">
+                                <img src="https://mall-res.momentcam.net/Images/mo/Upload/icon_upload_small.png" />
+                                <p>Húzd ide a képet!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="line">
+                        <span></span>
+                        <span>vagy</span>
+                        <span></span>
+                    </div>
+                    <div class="takeType" style="padding-bottom:20px;">
+                        <dl class="uloadPhoto" style="cursor:pointer;width:220px;padding:0;margin-right:10px;">
+                            <dt style="width:220px;">
+                                <button style="background: #b72a3d;text-align:center;width:100%;border-radius:6px;height:44px;line-height:44px;font-size:14px;color:#fff;" class="NextBtn mdc-button mdc-button--raised" data-demo-no-js>
+                                    <img style="margin-right:5px;width:26px;display:inline-block;vertical-align:middle;" src="https://mall-res.momentcam.net/Images/mo/Upload/upload-icon.png?v=2" />
+                                    Tölts fel egy képet!
+                                </button>
+                            </dt>
+                            <dd></dd>
+                        </dl>
+                        <!--<dl>
+                            <dt>
+                                <img src="https://mall-res.momentcam.net/Images/mo/Upload/icon_facebook.png"/>
+                            </dt>
+                            <dd>Facebook</dd>
+                        </dl>-->
+                        <dl class="cameraShoot" style="cursor:pointer;width:220px;padding:0;">
+                            <dt style="width:220px;">
+                                <button style="background: #b72a3d;text-align:center;width:100%;border-radius:6px;height:44px;line-height:44px;font-size:14px;color:#fff;" class="NextBtn mdc-button mdc-button--raised" data-demo-no-js>
+                                    <img style="margin-right:10px;width:26px;display:inline-block;vertical-align:middle;" src="https://mall-res.momentcam.net/Images/mo/Upload/camera-icon.png?v=2" />
+                                    Fényképező
+                                </button>
+                            </dt>
+                            <dd></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="CoverMask"></div>
+            <aside id="mdc-dialog-default" class="mdc-dialog" role="alertdialog" aria-hidden="true" aria-labelledby="mdc-dialog-default-label" aria-describedby="mdc-dialog-default-description" style="opacity:0;">
+                <div class="mdc-dialog__surface" style="min-width: 380px;max-width: 565px;">
+                    <header class="mdc-dialog__header">
+                        <h2 id="mdc-dialog-default-label" class="mdc-dialog__header__title" style="text-align:left;">
+                            Figyelem!
+                        </h2>
+                    </header>
+                    <section id="mdc-dialog-default-description" class="mdc-dialog__body" style="text-align:left;">
+                       
+                    </section>
+                    <footer class="mdc-dialog__footer">
+                        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel mdc-ripple-upgraded">OK</button>
+                    </footer>
+                </div>
+                <div class="mdc-dialog__backdrop"></div>
+            </aside>
+            <button id="default-dialog-activation" class="mdc-button mdc-button--primary mdc-button--raised mdc-ripple-upgraded" style="display:none;"></button>
+
+            <div class="confirm" style="display: none;">
+                <div class="ReleaseFaile">
+                    <p>
+
+                    </p>
+                    <div class="FaileSure">Kilépés</div>
+                    <div class="sSure">Törlés</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cameraCover" style="width:100%;height:100%;background:rgba(0,0,0,.6);position:fixed;left:0;top:0;display:none;z-index: 10000;">
+        <div class="cameraBox" style="width:910px;height:470px;position:absolute;top:0;left:50%;margin-left:-455px;display: block;padding:0 20px;box-sizing:border-box;background:#fff;">
+
+            <button class="cameraClose mdc-button firstBtns" style="padding:0;text-align:left;font-size:0;margin:12px 0;">
+                <img style="display:inline-block;vertical-align:middle;width:36px;margin-right:10px;" src="https://mall-res.momentcam.net/Images/mo/Beauty/ic_arrow_back.png" />
+                <span style="font-size:20px;font-weight:bold;display:inline-block;vertical-align:middle;color:#b72a3d;">Take Photo</span>
+            </button>
+            <button class="mdc-button photoBtns"  id="reset" style="padding:0;text-align:left;font-size:0;float:left;margin:12px 0;display:none;">
+                <img style="display:inline-block;vertical-align:middle;width:36px;margin-right:10px;" src="https://mall-res.momentcam.net/Images/mo/Beauty/ic_arrow_back.png" />
+                <span style="font-size:20px;font-weight:bold;display:inline-block;vertical-align:middle;color:#b72a3d;">Visszaállítás</span>
+            </button>
+            <div style="width:100%;height:100%;">
+                <div style="width:520px;height:390px;float:left;position:relative;">
+                    <video id="v" autoplay style="display:block;width:100%;height:100%;"></video>
+                    <img class="icon_box" style="width:520px;height:390px;position: absolute;top:0; left:0;z-index:9;" src="https://mall-res.momentcam.net/Images/mo/Upload/take_photo_faceform1.png?v=2" />
+                </div>
+                <div class="cameraImgBox" style="width:330px;overflow:hidden;float:left;margin-left:20px;">
+                    <img style="display:block;width:330px;" src="https://mall-res.momentcam.net/Images/mo/Upload/take_photo_image.jpg?v=2" />
+                    <p style="text-align:center;font-size:20px;color:#232323;margin-top:14px;">Take a photo with<br />front angle and good lighting</p>
+                </div>
+            </div>
+            
+            
+            <div class="shootButton  firstBtns" style="cursor:pointer;">
+                <button id="snap" class="mdc-button"></button>
+            </div>
+            <div class="resetBtns  photoBtns" style="cursor:pointer;display:none;">
+                <button id="confirm" class="mdc-button"></button>
+            </div>
+            <canvas id="canvasCemara" style="position: absolute;top:60px; left:0;object-fit:fill;" width="520" height="390"></canvas>
+        </div>
+    </div>
+    <!--<div class="cameraCover" style="width:100%;height:100%;background:rgba(0,0,0,.6);position:fixed;left:0;top:0;display:none;z-index: 10000;">
+        <div class="cameraBox" style="width:560px;height:470px;position:absolute;top:0;left:50%;margin-left:-280px;display: block;padding:0 20px;box-sizing:border-box;background:#fff;">
+
+            <button class="cameraClose mdc-button firstBtns" style="padding:0;text-align:left;font-size:0;float:left;margin:12px 0;">
+                <img style="display:inline-block;vertical-align:middle;width:36px;margin-right:10px;" src="https://mall-res.momentcam.net/Images/mo/Beauty/ic_arrow_back.png" />
+                <span style="font-size:20px;font-weight:bold;display:inline-block;vertical-align:middle;color:#b72a3d;">Take Photo</span>
+            </button>
+            <button class="mdc-button photoBtns"  id="reset" style="padding:0;text-align:left;font-size:0;float:left;margin:12px 0;display:none;">
+                <img style="display:inline-block;vertical-align:middle;width:36px;margin-right:10px;" src="https://mall-res.momentcam.net/Images/mo/Beauty/ic_arrow_back.png" />
+                <span style="font-size:20px;font-weight:bold;display:inline-block;vertical-align:middle;color:#b72a3d;">Visszaállítás</span>
+            </button>
+            <div style="width:520px;height:390px;">
+                <video id="v" autoplay style="display:block;width:100%;height:100%;"></video>
+            </div>
+            
+            <img class="icon_box" style="width:520px;height:390px;position: absolute;top:60px; left:50%;margin-left: -260px;z-index:9;" src="https://mall-res.momentcam.net/Images/mo/Upload/take_photo_faceform1.png?v=2" />
+            <div class="shootButton  firstBtns" style="cursor:pointer;">
+                <button id="snap" class="mdc-button"></button>
+            </div>
+            <div class="resetBtns  photoBtns" style="cursor:pointer;display:none;">
+                <button id="confirm" class="mdc-button"></button>
+            </div>
+            <canvas id="canvasCemara" style="position: absolute;top:60px; left:50%;margin-left: -260px;object-fit:fill;" width="520" height="390"></canvas>
+        </div>
+    </div>-->
+    <input style="opacity: 0;" id="file" type="file" />
+    <canvas id="canvas" width=300 style="display:none;position:absolute;top:10px;left:10px;z-index:9999"></canvas>
+    <script src="https://mall-res.momentcam.net/lib/jquery.min.js"></script>
+    <script src="https://mall-res.momentcam.net/lib/Cookie.js"></script>
+    <script src="../js/jquery.autocomplete.fixed.js"></script>
+    <script src="../js/config.js?V=b1"></script>
+    <!--<script src="https://mall-res.momentcam.net/lib/loading.js"></script>-->
+    <script src="../js/v2/handleUploadImg.js"></script>
+    <script src="../js/v2/upload.js?V=d1"></script>
+    <script src="../js/v2/p.js"></script>
+    <script src="../js/v2/Pub.js?V=3"></script>
+    <script src="../js/material/material-components-web.js"></script>
+    <script src="../js/material/material-components-web.css.js"></script>
+    <script src="../js/material/style.css.js"></script>
+    <script src="../js/material/loading-material.js"></script>
+    <script>
+        window.parent.history.pushState(null, null, "Index.html?name=upload");
+        $(window).bind("pageshow", function (event) {
+            if (event.originalEvent.persisted) {
+                window.location.reload()
+            }
+        });
+        $(function () {
+            U.init();
+        });
+        var dialog = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-default'));
+        dialog.listen('MDCDialog:accept', function () {
+            console.log('accepted');
+        });
+        dialog.listen('MDCDialog:cancel', function () {
+            console.log('canceled');
+        });
+        document.querySelector('#default-dialog-activation').addEventListener('click', function (evt) {
+            dialog.lastFocusedTarget = evt.target;
+            dialog.show();
+        });
+        var determinates = document.querySelectorAll('.mdc-linear-progress');
+        for (var i = 0, determinate; determinate = determinates[i]; i++) {
+            const linearProgress = mdc.linearProgress.MDCLinearProgress.attachTo(determinate);
+            linearProgress.progress = 0.5;
+            if (determinate.dataset.buffer) {
+                linearProgress.buffer = 0.75;
+            }
+        }
+    </script>
+</body>
+
+</html>

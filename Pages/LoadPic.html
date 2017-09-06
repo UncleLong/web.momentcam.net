@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../css/LoadPic.css" rel="stylesheet" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    
+    <style type="text/css">
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css);
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+</head>
+<body>
+    <div class="container">
+        <div class="resetGroup">
+            <div class="a">
+                <div class="NextBtn mdc-button mdc-button--raised">Előző</div>
+            </div>
+        </div>
+        <div class="picBox">
+        </div>
+    </div>
+    <div class="cover" style="display: none;">
+        <div class="coverMain">
+            <h3>Figyelem!</h3>
+            <p></p>
+            <div class="CoverConfirm">Elfogadom</div>
+        </div>
+    </div>
+    <script src="https://mall-res.momentcam.net/lib/jquery.min.js"></script>
+    <script src="https://mall-res.momentcam.net/lib/loading.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="https://mall-res.momentcam.net/lib/Cookie.js"></script>
+    <script src="../js/material/material-components-web.css.js"></script>
+    <script src="../js/material/style.css.js"></script>
+    <script>
+        $(function () {
+            $(".resetGroup").on("click", function () {
+                window.parent.parent.history.pushState(null, null, "Index.html");
+                window.parent.parent.location.reload();
+            });
+            var p = "userid=" + Cookies.get("UserId");
+            CallAjax(MomentCam.urls.getusercartoonsorder, p, function (result) {
+                if (result.JsonLst.length == 0) {
+                    window.parent.document.getElementById('GoLoadPic').style.display = "none";
+                } else {
+                    var html = "";
+                    for (var i = 0; i < result.JsonLst.length; i++) {
+                        html += '<div class="Model">' +
+                                    '<div class="ModelImg">' +
+                                        '<img src="' + result.JsonLst[i].UserImage.split("?")[0] + '" />' +
+                                    '</div>' +
+                                    '<a href="' + result.JsonLst[i].UserImage + '" class="LoadBtn mdc-button mdc-button--raised" download="img.png">Download</a>' +
+                                '</div>';
+                    }
+                    $(".picBox").html(html);
+                }
+            });
+            $("body").unbind("click").on("click", function () {
+                window.parent.hiding($(this));
+            });
+        })
+    </script>
+</body>
+</html>
+

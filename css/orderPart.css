@@ -1,0 +1,434 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+.move{
+    margin-right:320px;
+}
+.order_Main {
+	position: absolute;
+    top:0;
+    right:-1034px;
+	width: 1034px;
+	height: 100%;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    background:#fff;
+    padding:0 20px 20px;
+}
+.order_Main::-webkit-scrollbar {
+        display: none;
+    }
+.addAddress {
+	border: 2px solid #b52b3c;
+	margin-top: 20px;
+    position:relative;
+    display:none;
+}
+.order_Main h3{
+    height:60px;
+    line-height:60px;
+    box-sizing:border-box;
+    border-bottom:1px solid #e0e0e0;
+}
+.addAddress p {
+	position: absolute;
+	background-color: white;
+	padding: 0 10px;
+	top: -13px;
+	left: 13px;
+}
+
+.addAddress .address_options {
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	flex-direction: row;
+}
+.EmailBox input{
+    width:100%;
+    border:2px solid transparent;
+}
+.addAddress .address_options> * {
+	margin: 0 10px;
+}
+
+.addAddress .address_options:nth-child(1),.EmailBox input {
+	margin-top: 10px;
+}
+
+.addAddress .address_options input,
+.addAddress .address_options select,.EmailBox input {
+	flex: 1 0 auto;
+	font-size: 20px;
+	line-height: 2;
+	padding-left: 10px;
+}
+
+.addAddress .address_options input:focus,.EmailBox input:focus {
+	outline: none;
+	border: 2px solid #B52B3C;
+	color: #B52B3C;
+}
+
+.addAddress .address_options:nth-child(3) input,
+.addAddress .address_options:nth-child(3) select,.EmailBox input {
+	flex: 1 0 auto;
+}
+
+.addAddress .address_options input::-webkit-input-placeholder,.EmailBox input {
+	font-size: 20px;
+	line-height: 2;
+    border:2px solid #e0e0e0;
+}
+
+.addAddress .addAddress_Buttons {
+	display: flex;
+	padding: 10px;
+	justify-content: center;
+}
+
+.addAddress .addAddress_Buttons>div {
+	flex: 1 0 auto;
+	text-align: center;
+	font-size: 20px;
+	height: 44px;
+	line-height: 44px;
+	margin: 0 10px;
+	margin-bottom: 10px;
+	color: white;
+    cursor:pointer;
+}
+
+.addAddress .addAddress_Buttons>div:nth-child(1) {
+	background-color: #B52B3C;
+}
+
+.addAddress .addAddress_Buttons>div:nth-child(2) {
+	background-color: rgb(153, 153, 153);
+}
+
+.addressBox {
+	position: relative;
+	font-size: 0;
+}
+.addressBox .showAll{
+    color: #999;
+    margin:20px 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+    .addressBox .showAll .tu {
+        display:inline-block;
+        vertical-align:middle;
+        width:10px;
+        height:12px;
+        background-image: url('../img/Order/order_address_number_down.png');
+        background-repeat:repeat-y;
+        margin-left:6px;
+    }
+.addressBox .box {
+	font-size: 16px;
+	display: inline-block;
+	height: 207px;
+	width: 312px;
+	border: 1px solid #e0e0e0;
+	margin-top: 20px;
+    margin-right:20px;
+	padding: 30px 0 20px 20px;
+	position: relative;
+	vertical-align: top;
+	font-family: PingFang-SC-Regular;
+    box-sizing:border-box;
+    position:relative;
+}
+.addressBox .box.active{
+    border:2px solid #b52b3c;
+}
+    .addressBox .box .default {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-image: url('../img/Order/order_address_chosen.png');
+        display:none;
+    }
+    .addressBox .box.active .default{
+        display:block;
+    }
+.addressBox .box:nth-child(3n+3){
+    margin-right:0;
+}
+.addressBox .boxCreat{
+    cursor:pointer;
+}
+.addressBox .boxCreat img{
+    width:52px;
+    margin:25px auto 10px;
+}
+.addressBox .boxCreat p{
+    text-align:center;
+    font-size:18px;
+    color:#757575;
+}
+.addressBox .box .box-left {
+	width: 220px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.addressBox .box .box-left span {
+	display: block;
+	padding-bottom: 10px;
+	color: #232323;
+}
+
+.addressBox .box .box-left .name {
+	font-size: 20px;
+	font-family: PingFang-SC-Bold;
+	color: #B52B3C;
+}
+
+.addressBox .box .country {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	font-size: 18px;
+	color: #999999;
+	margin: 0;
+}
+
+.productInfo {
+	position: relative;
+}
+
+.productInfo .productInfoWrapper {
+	border: 1px solid #e0e0e0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	line-height: 126px;
+}
+
+.productInfo .productInfoWrapper .productThumb {
+	width: 126px;
+	height: 126px;
+	float: left;
+	padding: 10px 20px 10px 10px;
+    object-fit:cover;
+}
+
+.productInfo .productInfoWrapper .productName {
+	margin-left: 20px;
+	float: left;
+	margin-top: 57px;
+	line-height: 0;
+}
+
+.productInfo .productInfoWrapper .productName span:nth-child(1) {
+	font-size: 20px;
+	color: #232323;
+}
+
+.productInfo .productInfoWrapper .productName span:nth-child(2) {
+	font-size: 11px;
+	color: #999999;
+	display: block;
+	/*height: 10px;*/
+	margin-top: 22px;
+}
+.productInfo .message,.productInfo .Code{
+    width:100%;
+    height:54px;
+    position:relative;
+    margin-top:30px;
+}
+.productInfo .message span,.productInfo .Code span{
+    display:block;
+    padding:0 10px;
+    background:#fff;
+    position:absolute;
+    left:10px;
+    top:-12px;
+    font-size:20px;
+    color:#999;
+}
+.productInfo .message input{
+    display:inline-block;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    border:1px solid #e0e0e0;
+    font-size: 20px;
+    text-indent:10px;
+}
+.productInfo .message input:focus,.productInfo .Code input:focus{
+    outline: none;
+	border: 2px solid #B52B3C;
+}
+.productInfo .Code input{
+    float:left;
+    width:830px;
+    height:54px;
+    margin-right:10px;
+    box-sizing:border-box;
+    border:1px solid #e0e0e0;
+    font-size: 20px;
+    text-indent:10px;
+}
+.productInfo .Code .UseCodeBtn{
+    float:right;
+    width:136px;
+    height:54px;
+    box-sizing:border-box;
+    border:1px solid #b52b3c;
+    font-size:20px;
+    color:#b52b3c;
+    line-height:52px;
+    text-align:center;
+    cursor:pointer;
+}
+.productInfo .rightPart {
+	float: right;
+}
+
+.productInfo .rightPart span {
+	width: 150px;
+	float: left;
+	font-size: 20px;
+}
+
+.productInfo .rightPart span:nth-child(3) {
+	color: #b72a3d;
+}
+
+.pricePart {
+	margin-top: 20px;
+	position: relative;
+	float: right;
+	width: 370px;
+}
+
+.pricePart>div {
+	float: left;
+	clear: both;
+	width: 100%;
+	display: table-cell;
+}
+.pricePart>div span{
+	display: inline-block;
+}
+.pricePart>div span:nth-child(2n+1) {
+	text-align: right;
+	width:240px;
+	vertical-align: middle;
+}
+.pricePart>div span:nth-child(2n+2) {
+	text-align: right;
+	float: right;
+	vertical-align: middle;
+}
+.pricePart .price{
+	color:#b52b3c;
+	font-size:18px;
+}
+.pricePart .shippingFee{
+	margin-top:10px;
+}
+.pricePart .totalPrice{
+	margin-top:30px;
+}
+.pricePart .big{
+	font-size:28px;
+}
+.submitButton{
+	float:right;
+	width:320px;
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	color:white;
+	background-color: #b52b3c;
+	clear: both;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size:18px;
+    cursor:pointer;
+    transition:all .5s ease-in-out;
+}
+.submitButton:hover{
+    background-color: #8e1e2c;
+}
+
+/*订单支付成功*/
+.Success {
+    width: 1020px;
+    height: 600px;
+    margin: 80px auto 0;
+    background: #fff;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    -moz-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    overflow: hidden;
+    text-align:center;
+}
+
+    .Success img {
+        display: block;
+        width: 64px;
+        margin: 110px auto 30px;
+    }
+
+    .Success h3 {
+        font-size: 28px;
+        text-align: center;
+        color: #b52b3c;
+    }
+
+    .Success p {
+        font-size: 18px;
+        text-align: center;
+        color: #232323;
+        margin: 15px 0 2px;
+    }
+    .Success .orderId{
+        display:inline-block;
+        padding:0 32px;
+        width:auto;
+        height:72px;
+        line-height:72px;
+        font-size:18px;
+        color:#000;
+        border-radius:8px;
+        background:#e3e3e3;
+        margin:20px auto 5px;
+    }
+    .Success .OK {
+        display:block;
+        width: 320px;
+        height: 54px;
+        text-align: center;
+        line-height: 54px;
+        background: #b52b3c;
+        margin: 20px auto;
+
+    }
+
+        .Success .OK a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            font-size: 22px;
+            text-decoration:none;
+        }
